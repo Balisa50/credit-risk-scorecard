@@ -9,3 +9,5 @@ next-env.d.ts.bak
 __pycache__/
 *.pyc
 pipeline/data/*.csv
+
+.vercel
