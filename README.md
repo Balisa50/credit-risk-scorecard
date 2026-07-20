@@ -9,7 +9,7 @@ Why build this: most credit risk tooling assumes the data and risk distribution 
 1. **Data cleaning** - handle informal income fields, missing collateral data, outlier capping at 1st/99th percentile
 2. **WoE/IV feature selection** - bins continuous variables, calculates Information Value per feature. Drops anything below IV 0.02
 3. **Logistic regression** - fit on WoE-transformed features, convert coefficients to Basel II integer scorecard points (PDO = 20, base score = 600)
-4. **Validation** - Gini 0.56, KS 0.42 on holdout. PSI < 0.1 across validation windows (stable)
+4. **Validation** - Gini 0.29, KS 0.23 on the time-based holdout. PSI 0.008 across validation windows (stable)
 5. **Stress testing** - shift default rate +50% (economic stress), +100% (severe), shift feature distributions, re-score the book
 
 ## Stack
@@ -30,12 +30,22 @@ npm install && npm run dev
 
 ## Results
 
-| Metric | Value |
-|--------|-------|
-| Gini coefficient | 0.56 |
-| KS statistic | 0.42 |
-| PSI (population stability) | < 0.10 |
-| AUC-ROC | 0.78 |
+All figures below are the test-set values written by `pipeline/run_pipeline.py`
+into `public/data/pipeline_results.json`, which is also what the dashboard renders.
+
+| Metric | Train | Test | Industry threshold |
+|--------|-------|------|--------------------|
+| Gini coefficient | 0.35 | **0.29** | > 0.4 |
+| KS statistic | 0.27 | **0.23** | > 0.3 |
+| AUC-ROC | 0.68 | **0.65** | - |
+| PSI (population stability) | - | **0.008** | < 0.1 |
+
+Discrimination falls short of the usual thresholds, and that is a property of the
+synthetic data rather than the modelling. No feature reaches Strong information
+value: `previous_defaults` is the best at IV 0.13, and the eight selected
+features sum to roughly 0.51 IV. A scorecard cannot separate better than its
+features do. The stability and explainability layers (PSI, WoE bins, points
+conversion) are the parts worth reading here.
 
 ## Live
 
