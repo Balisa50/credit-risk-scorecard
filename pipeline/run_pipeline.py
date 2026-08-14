@@ -15,6 +15,9 @@ sys.path.insert(0, str(Path(__file__).parent))
 from generate_data import generate
 from sklearn.model_selection import train_test_split
 
+# Fraction of the book, by vintage, used for fitting.
+TIME_SPLIT_QUANTILE = 0.7
+
 from src.woe_iv import compute_all_woe_iv, woe_transform
 from src.scorecard import build_scorecard, compute_scores, score_distribution
 from src.validation import (
@@ -54,8 +57,18 @@ def main():
     # which is small because 12,000 rows and coarse bins make the bin
     # statistics stable. It is fixed because a scorecard that an auditor can
     # read is the entire point of the project, not because the number moved.
-    train_idx, test_idx = train_test_split(
-        df.index, test_size=0.3, random_state=42, stratify=df["default"]
+    # Split by vintage, not at random. A random split puts loans from the same
+    # months on both sides, so the holdout is drawn from the period the model
+    # was fitted on and every stability measure looks perfect by construction.
+    # Training on the earlier book and scoring the later one is the test a
+    # scorecard actually faces in production.
+    cutoff = df["vintage"].quantile(TIME_SPLIT_QUANTILE)
+    train_idx = df.index[df["vintage"] <= cutoff]
+    test_idx = df.index[df["vintage"] > cutoff]
+    print(
+        f"    Time split at vintage {int(cutoff)}: "
+        f"train {len(train_idx)} loans (default {df.loc[train_idx, 'default'].mean():.1%}), "
+        f"test {len(test_idx)} loans (default {df.loc[test_idx, 'default'].mean():.1%})"
     )
     woe_details, iv_summary = compute_all_woe_iv(df.loc[train_idx], features)
     print(f"    Top features by IV:")
@@ -97,20 +110,35 @@ def main():
     print(f"    Train Gini: {train_gini:.4f}, Test Gini: {test_gini:.4f}")
     print(f"    Train KS:   {train_ks['ks']:.4f}, Test KS:   {test_ks['ks']:.4f}")
 
-    # PSI between train and test score distributions.
+    # PSI between the score distribution on the fitting book and on the later
+    # book. This is now a real drift measure: the two populations are different
+    # months, not two halves of one shuffle.
     #
-    # Read this for what it is. PSI exists to detect population drift between
-    # the data a model was built on and the data it is scoring later. Both
-    # halves here come from one random split of one generated dataset, so a
-    # near-zero value is arithmetic, not evidence that the scorecard is stable
-    # in production. It is kept as a wiring check and labelled as such.
-    #
-    # A real stability figure needs an origination date on each loan and a
-    # split by vintage. The generator has no time axis at all, so that test
-    # cannot be run here yet; adding one is the next piece of work.
+    # It measures drift in THIS generator, whose deterioration is a stated
+    # assumption (loosening leverage plus a macro shock in the back third), not
+    # a measurement of any real portfolio.
     psi_result = population_stability_index(train_scores, test_scores)
-    psi_result["scope"] = "same-period random split, not temporal drift"
-    print(f"    PSI: {psi_result['psi']:.4f} ({psi_result['scope']})")
+    psi_result["scope"] = "earlier vintages vs later vintages"
+
+    # Worth reporting next to the PSI, because on this book they disagree and
+    # the disagreement is the point. PSI is computed on the SCORE distribution:
+    # it answers "do the applicants look different", not "are they defaulting
+    # more". Here the score distribution barely moves while realised defaults
+    # rise by about a third, because the deterioration comes from a macro shock
+    # that no feature in the scorecard observes. A monitoring setup watching
+    # PSI alone would have seen nothing and called the model stable.
+    train_dr = float(df.loc[train_idx, "default"].mean())
+    test_dr = float(df.loc[test_idx, "default"].mean())
+    psi_result["train_default_rate"] = round(train_dr, 4)
+    psi_result["test_default_rate"] = round(test_dr, 4)
+    psi_result["default_rate_shift"] = round(test_dr - train_dr, 4)
+
+    print(f"    PSI: {psi_result['psi']:.4f} ({psi_result['interpretation']}, {psi_result['scope']})")
+    print(
+        f"    Realised default rate: {train_dr:.1%} -> {test_dr:.1%} "
+        f"({test_dr - train_dr:+.1%}). PSI does not see this: it measures the "
+        f"score distribution, not the outcome."
+    )
 
     # ROC and KS curve data
     roc = roc_data(result["y_test"].values, test_probs)

@@ -1,585 +1,585 @@
 {
   "dataset": {
     "total_records": 12000,
-    "default_rate": 0.1132,
-    "total_defaults": 1358,
-    "total_portfolio_usd": 7849841.52,
-    "avg_loan_usd": 654.15,
-    "median_loan_usd": 499.71,
+    "default_rate": 0.1332,
+    "total_defaults": 1599,
+    "total_portfolio_usd": 9427979.84,
+    "avg_loan_usd": 785.66,
+    "median_loan_usd": 599.02,
     "countries": 5,
     "sectors": 6,
-    "train_size": 8400,
-    "test_size": 3600
+    "train_size": 8531,
+    "test_size": 3469
   },
   "country_stats": [
     {
       "country": "Gambia",
-      "count": 3544,
-      "defaults": 410,
-      "avg_loan": 656.31,
-      "default_rate": 0.1157
+      "count": 3597,
+      "defaults": 493,
+      "avg_loan": 790.43,
+      "default_rate": 0.1371
     },
     {
       "country": "Ghana",
-      "count": 2366,
-      "defaults": 264,
-      "avg_loan": 646.63,
-      "default_rate": 0.1116
+      "count": 2441,
+      "defaults": 325,
+      "avg_loan": 779.93,
+      "default_rate": 0.1331
     },
     {
       "country": "Nigeria",
-      "count": 2504,
-      "defaults": 283,
-      "avg_loan": 649.83,
-      "default_rate": 0.113
+      "count": 2444,
+      "defaults": 316,
+      "avg_loan": 774.51,
+      "default_rate": 0.1293
     },
     {
       "country": "Senegal",
-      "count": 2412,
-      "defaults": 270,
-      "avg_loan": 659.98,
-      "default_rate": 0.1119
+      "count": 2304,
+      "defaults": 301,
+      "avg_loan": 789.88,
+      "default_rate": 0.1306
     },
     {
       "country": "Sierra Leone",
-      "count": 1174,
-      "defaults": 131,
-      "avg_loan": 660.06,
-      "default_rate": 0.1116
+      "count": 1214,
+      "defaults": 164,
+      "avg_loan": 797.52,
+      "default_rate": 0.1351
     }
   ],
   "sector_stats": [
     {
       "sector": "Agriculture",
-      "count": 3007,
-      "defaults": 331,
-      "default_rate": 0.1101
+      "count": 2999,
+      "defaults": 403,
+      "default_rate": 0.1344
     },
     {
       "sector": "Fishing",
-      "count": 840,
-      "defaults": 88,
-      "default_rate": 0.1048
+      "count": 831,
+      "defaults": 116,
+      "default_rate": 0.1396
     },
     {
       "sector": "Livestock",
-      "count": 978,
-      "defaults": 127,
-      "default_rate": 0.1299
+      "count": 931,
+      "defaults": 125,
+      "default_rate": 0.1343
     },
     {
       "sector": "Manufacturing",
-      "count": 1209,
-      "defaults": 154,
-      "default_rate": 0.1274
+      "count": 1188,
+      "defaults": 161,
+      "default_rate": 0.1355
     },
     {
       "sector": "Petty trade",
-      "count": 3525,
-      "defaults": 408,
-      "default_rate": 0.1157
+      "count": 3624,
+      "defaults": 481,
+      "default_rate": 0.1327
     },
     {
       "sector": "Services",
-      "count": 2441,
-      "defaults": 250,
-      "default_rate": 0.1024
+      "count": 2427,
+      "defaults": 313,
+      "default_rate": 0.129
     }
   ],
   "iv_summary": [
     {
+      "feature": "dti_ratio",
+      "iv": 0.14706548595910668,
+      "strength": "Medium"
+    },
+    {
       "feature": "previous_defaults",
-      "iv": 0.15855735135572233,
+      "iv": 0.10591914220742339,
       "strength": "Medium"
     },
     {
       "feature": "dpd_history_days",
-      "iv": 0.15727747539604015,
+      "iv": 0.10464500476825722,
       "strength": "Medium"
-    },
-    {
-      "feature": "dti_ratio",
-      "iv": 0.13900317326972103,
-      "strength": "Medium"
-    },
-    {
-      "feature": "loan_amount_usd",
-      "iv": 0.05928487532006519,
-      "strength": "Weak"
-    },
-    {
-      "feature": "loan_term_months",
-      "iv": 0.044629242128702326,
-      "strength": "Weak"
-    },
-    {
-      "feature": "years_in_business",
-      "iv": 0.03545621472998371,
-      "strength": "Weak"
     },
     {
       "feature": "group_lending",
-      "iv": 0.035087578004922,
+      "iv": 0.05239875874795776,
+      "strength": "Weak"
+    },
+    {
+      "feature": "loan_amount_usd",
+      "iv": 0.04139335854778831,
       "strength": "Weak"
     },
     {
       "feature": "has_collateral",
-      "iv": 0.021798563728292936,
+      "iv": 0.035204675643209386,
       "strength": "Weak"
     },
     {
-      "feature": "interest_rate_pct",
-      "iv": 0.02172201624250291,
+      "feature": "years_in_business",
+      "iv": 0.028393217042843078,
+      "strength": "Weak"
+    },
+    {
+      "feature": "loan_term_months",
+      "iv": 0.027332190320442033,
       "strength": "Weak"
     },
     {
       "feature": "previous_loans",
-      "iv": 0.01780379056019223,
-      "strength": "Not predictive"
+      "iv": 0.026136754317731846,
+      "strength": "Weak"
+    },
+    {
+      "feature": "interest_rate_pct",
+      "iv": 0.024599983864624975,
+      "strength": "Weak"
     },
     {
       "feature": "monthly_income_usd",
-      "iv": 0.011739989974222821,
-      "strength": "Not predictive"
-    },
-    {
-      "feature": "loan_purpose",
-      "iv": 0.006899948726916862,
-      "strength": "Not predictive"
-    },
-    {
-      "feature": "sector",
-      "iv": 0.006870208800286258,
-      "strength": "Not predictive"
-    },
-    {
-      "feature": "gender",
-      "iv": 0.004310567584825806,
+      "iv": 0.00980783798998168,
       "strength": "Not predictive"
     },
     {
       "feature": "age",
-      "iv": 0.002549516648243524,
+      "iv": 0.009269279658786258,
+      "strength": "Not predictive"
+    },
+    {
+      "feature": "loan_purpose",
+      "iv": 0.004635252339521431,
+      "strength": "Not predictive"
+    },
+    {
+      "feature": "gender",
+      "iv": 0.004620431714465439,
       "strength": "Not predictive"
     },
     {
       "feature": "dependents",
-      "iv": 0.0012713957180883106,
+      "iv": 0.003958296664492559,
+      "strength": "Not predictive"
+    },
+    {
+      "feature": "sector",
+      "iv": 0.002271707109640236,
       "strength": "Not predictive"
     },
     {
       "feature": "country",
-      "iv": 0.0010109578229864505,
+      "iv": 0.0003536708422550371,
       "strength": "Not predictive"
     }
   ],
   "woe_details": {
+    "dti_ratio": [
+      {
+        "bin": "(0.056799999999999996, 0.206]",
+        "count": 854,
+        "events": 61,
+        "non_events": 793,
+        "event_rate": 0.0714,
+        "woe": 0.5947
+      },
+      {
+        "bin": "(0.206, 0.293]",
+        "count": 854,
+        "events": 53,
+        "non_events": 801,
+        "event_rate": 0.0621,
+        "woe": 0.7441
+      },
+      {
+        "bin": "(0.293, 0.38]",
+        "count": 853,
+        "events": 54,
+        "non_events": 799,
+        "event_rate": 0.0633,
+        "woe": 0.723
+      },
+      {
+        "bin": "(0.38, 0.468]",
+        "count": 852,
+        "events": 118,
+        "non_events": 734,
+        "event_rate": 0.1385,
+        "woe": -0.1385
+      },
+      {
+        "bin": "(0.468, 0.568]",
+        "count": 853,
+        "events": 117,
+        "non_events": 736,
+        "event_rate": 0.1372,
+        "woe": -0.1273
+      },
+      {
+        "bin": "(0.568, 0.68]",
+        "count": 854,
+        "events": 123,
+        "non_events": 731,
+        "event_rate": 0.144,
+        "woe": -0.1839
+      },
+      {
+        "bin": "(0.68, 0.82]",
+        "count": 852,
+        "events": 127,
+        "non_events": 725,
+        "event_rate": 0.1491,
+        "woe": -0.224
+      },
+      {
+        "bin": "(0.82, 1.035]",
+        "count": 853,
+        "events": 130,
+        "non_events": 723,
+        "event_rate": 0.1524,
+        "woe": -0.25
+      },
+      {
+        "bin": "(1.035, 1.457]",
+        "count": 853,
+        "events": 142,
+        "non_events": 711,
+        "event_rate": 0.1665,
+        "woe": -0.3547
+      },
+      {
+        "bin": "(1.457, 3.646]",
+        "count": 853,
+        "events": 122,
+        "non_events": 731,
+        "event_rate": 0.143,
+        "woe": -0.1758
+      }
+    ],
     "previous_defaults": [
       {
         "bin": "0",
-        "count": 6991,
-        "events": 654,
-        "non_events": 6337,
-        "event_rate": 0.0935,
-        "woe": 0.2139
+        "count": 7122,
+        "events": 754,
+        "non_events": 6368,
+        "event_rate": 0.1059,
+        "woe": 0.1679
       },
       {
         "bin": "1",
-        "count": 1304,
-        "events": 280,
-        "non_events": 1024,
-        "event_rate": 0.2147,
-        "woe": -0.7611
+        "count": 1291,
+        "events": 266,
+        "non_events": 1025,
+        "event_rate": 0.206,
+        "woe": -0.6176
       },
       {
         "bin": "2",
-        "count": 98,
-        "events": 17,
-        "non_events": 81,
-        "event_rate": 0.1735,
-        "woe": -0.5181
+        "count": 115,
+        "events": 26,
+        "non_events": 89,
+        "event_rate": 0.2261,
+        "woe": -0.7481
       },
       {
         "bin": "3",
-        "count": 7,
-        "events": 0,
-        "non_events": 7,
-        "event_rate": 0.0,
-        "woe": 0.6516
+        "count": 3,
+        "events": 1,
+        "non_events": 2,
+        "event_rate": 0.3333,
+        "woe": -1.4544
       }
     ],
     "dpd_history_days": [
       {
         "bin": "(-0.001, 7.0]",
-        "count": 4969,
-        "events": 466,
-        "non_events": 4503,
-        "event_rate": 0.0938,
-        "woe": 0.2113
+        "count": 5099,
+        "events": 536,
+        "non_events": 4563,
+        "event_rate": 0.1051,
+        "woe": 0.176
       },
       {
         "bin": "(14.0, 21.0]",
-        "count": 973,
-        "events": 84,
-        "non_events": 889,
-        "event_rate": 0.0863,
-        "woe": 0.2979
+        "count": 1003,
+        "events": 109,
+        "non_events": 894,
+        "event_rate": 0.1087,
+        "woe": 0.1356
       },
       {
-        "bin": "(21.0, 90.0]",
-        "count": 573,
-        "events": 114,
-        "non_events": 459,
-        "event_rate": 0.199,
-        "woe": -0.6665
+        "bin": "(21.0, 85.0]",
+        "count": 556,
+        "events": 113,
+        "non_events": 443,
+        "event_rate": 0.2032,
+        "woe": -0.6019
       },
       {
         "bin": "(7.0, 14.0]",
-        "count": 1049,
-        "events": 104,
-        "non_events": 945,
-        "event_rate": 0.0991,
-        "woe": 0.1465
-      },
-      {
-        "bin": "(90.0, 179.0]",
-        "count": 836,
-        "events": 183,
-        "non_events": 653,
-        "event_rate": 0.2189,
-        "woe": -0.7859
-      }
-    ],
-    "dti_ratio": [
-      {
-        "bin": "(0.048299999999999996, 0.178]",
-        "count": 841,
-        "events": 65,
-        "non_events": 776,
-        "event_rate": 0.0773,
-        "woe": 0.419
-      },
-      {
-        "bin": "(0.178, 0.264]",
-        "count": 839,
-        "events": 49,
-        "non_events": 790,
-        "event_rate": 0.0584,
-        "woe": 0.7169
-      },
-      {
-        "bin": "(0.264, 0.339]",
-        "count": 841,
-        "events": 59,
-        "non_events": 782,
-        "event_rate": 0.0702,
-        "woe": 0.5228
-      },
-      {
-        "bin": "(0.339, 0.417]",
-        "count": 839,
-        "events": 68,
-        "non_events": 771,
-        "event_rate": 0.081,
-        "woe": 0.3678
-      },
-      {
-        "bin": "(0.417, 0.502]",
-        "count": 840,
-        "events": 98,
-        "non_events": 742,
-        "event_rate": 0.1167,
-        "woe": -0.0338
-      },
-      {
-        "bin": "(0.502, 0.604]",
-        "count": 840,
-        "events": 125,
-        "non_events": 715,
-        "event_rate": 0.1488,
-        "woe": -0.3131
-      },
-      {
-        "bin": "(0.604, 0.726]",
-        "count": 840,
-        "events": 115,
-        "non_events": 725,
-        "event_rate": 0.1369,
-        "woe": -0.2162
-      },
-      {
-        "bin": "(0.726, 0.906]",
-        "count": 841,
-        "events": 136,
-        "non_events": 705,
-        "event_rate": 0.1617,
-        "woe": -0.4112
-      },
-      {
-        "bin": "(0.906, 1.261]",
-        "count": 839,
+        "count": 1020,
         "events": 109,
-        "non_events": 730,
-        "event_rate": 0.1299,
-        "woe": -0.1559
-      },
-      {
-        "bin": "(1.261, 2.849]",
-        "count": 840,
-        "events": 127,
-        "non_events": 713,
-        "event_rate": 0.1512,
-        "woe": -0.3317
-      }
-    ],
-    "loan_amount_usd": [
-      {
-        "bin": "(1318.676, 9274.77]",
-        "count": 840,
-        "events": 146,
-        "non_events": 694,
-        "event_rate": 0.1738,
-        "woe": -0.4976
-      },
-      {
-        "bin": "(166.83, 245.554]",
-        "count": 840,
-        "events": 68,
-        "non_events": 772,
-        "event_rate": 0.081,
-        "woe": 0.3691
-      },
-      {
-        "bin": "(245.554, 320.327]",
-        "count": 840,
-        "events": 96,
-        "non_events": 744,
-        "event_rate": 0.1143,
-        "woe": -0.0106
-      },
-      {
-        "bin": "(320.327, 405.334]",
-        "count": 840,
-        "events": 92,
-        "non_events": 748,
-        "event_rate": 0.1095,
-        "woe": 0.0371
-      },
-      {
-        "bin": "(40.899, 166.83]",
-        "count": 840,
-        "events": 69,
-        "non_events": 771,
-        "event_rate": 0.0821,
-        "woe": 0.3533
-      },
-      {
-        "bin": "(405.334, 505.505]",
-        "count": 840,
-        "events": 85,
-        "non_events": 755,
-        "event_rate": 0.1012,
-        "woe": 0.1251
-      },
-      {
-        "bin": "(505.505, 619.032]",
-        "count": 840,
-        "events": 88,
-        "non_events": 752,
-        "event_rate": 0.1048,
-        "woe": 0.0867
-      },
-      {
-        "bin": "(619.032, 765.099]",
-        "count": 840,
-        "events": 110,
-        "non_events": 730,
-        "event_rate": 0.131,
-        "woe": -0.165
-      },
-      {
-        "bin": "(765.099, 970.75]",
-        "count": 840,
-        "events": 92,
-        "non_events": 748,
-        "event_rate": 0.1095,
-        "woe": 0.0371
-      },
-      {
-        "bin": "(970.75, 1318.676]",
-        "count": 840,
-        "events": 105,
-        "non_events": 735,
-        "event_rate": 0.125,
-        "woe": -0.1119
-      }
-    ],
-    "loan_term_months": [
-      {
-        "bin": "12",
-        "count": 2548,
-        "events": 264,
-        "non_events": 2284,
-        "event_rate": 0.1036,
-        "woe": 0.1005
-      },
-      {
-        "bin": "18",
-        "count": 951,
-        "events": 73,
-        "non_events": 878,
-        "event_rate": 0.0768,
-        "woe": 0.4254
-      },
-      {
-        "bin": "24",
-        "count": 682,
-        "events": 65,
-        "non_events": 617,
-        "event_rate": 0.0953,
-        "woe": 0.1881
-      },
-      {
-        "bin": "3",
-        "count": 842,
-        "events": 134,
-        "non_events": 708,
-        "event_rate": 0.1591,
-        "woe": -0.394
-      },
-      {
-        "bin": "6",
-        "count": 2095,
-        "events": 258,
-        "non_events": 1837,
-        "event_rate": 0.1232,
-        "woe": -0.0943
-      },
-      {
-        "bin": "9",
-        "count": 1282,
-        "events": 157,
-        "non_events": 1125,
-        "event_rate": 0.1225,
-        "woe": -0.089
-      }
-    ],
-    "years_in_business": [
-      {
-        "bin": "(-0.001, 0.4]",
-        "count": 877,
-        "events": 116,
-        "non_events": 761,
-        "event_rate": 0.1323,
-        "woe": -0.1763
-      },
-      {
-        "bin": "(0.4, 0.9]",
-        "count": 937,
-        "events": 148,
-        "non_events": 789,
-        "event_rate": 0.158,
-        "woe": -0.3829
-      },
-      {
-        "bin": "(0.9, 1.4]",
-        "count": 776,
-        "events": 79,
-        "non_events": 697,
-        "event_rate": 0.1018,
-        "woe": 0.118
-      },
-      {
-        "bin": "(1.4, 2.0]",
-        "count": 811,
-        "events": 79,
-        "non_events": 732,
-        "event_rate": 0.0974,
-        "woe": 0.167
-      },
-      {
-        "bin": "(2.0, 2.7]",
-        "count": 817,
-        "events": 81,
-        "non_events": 736,
-        "event_rate": 0.0991,
-        "woe": 0.1476
-      },
-      {
-        "bin": "(2.7, 3.6]",
-        "count": 861,
-        "events": 92,
-        "non_events": 769,
+        "non_events": 911,
         "event_rate": 0.1069,
-        "woe": 0.0648
+        "woe": 0.1544
       },
       {
-        "bin": "(3.6, 4.8]",
-        "count": 826,
-        "events": 101,
-        "non_events": 725,
-        "event_rate": 0.1223,
-        "woe": -0.0869
-      },
-      {
-        "bin": "(4.8, 6.4]",
-        "count": 849,
-        "events": 96,
-        "non_events": 753,
-        "event_rate": 0.1131,
-        "woe": 0.0014
-      },
-      {
-        "bin": "(6.4, 9.1]",
-        "count": 823,
-        "events": 83,
-        "non_events": 740,
-        "event_rate": 0.1009,
-        "woe": 0.1287
-      },
-      {
-        "bin": "(9.1, 30.0]",
-        "count": 823,
-        "events": 76,
-        "non_events": 747,
-        "event_rate": 0.0923,
-        "woe": 0.2257
+        "bin": "(85.0, 179.0]",
+        "count": 853,
+        "events": 180,
+        "non_events": 673,
+        "event_rate": 0.211,
+        "woe": -0.648
       }
     ],
     "group_lending": [
       {
         "bin": "0",
-        "count": 3303,
-        "events": 452,
-        "non_events": 2851,
-        "event_rate": 0.1368,
-        "woe": -0.2166
+        "count": 3500,
+        "events": 534,
+        "non_events": 2966,
+        "event_rate": 0.1526,
+        "woe": -0.2522
       },
       {
         "bin": "1",
-        "count": 5097,
-        "events": 499,
-        "non_events": 4598,
-        "event_rate": 0.0979,
-        "woe": 0.1625
+        "count": 5031,
+        "events": 513,
+        "non_events": 4518,
+        "event_rate": 0.102,
+        "woe": 0.2087
+      }
+    ],
+    "loan_amount_usd": [
+      {
+        "bin": "(1089.55, 1502.61]",
+        "count": 853,
+        "events": 123,
+        "non_events": 730,
+        "event_rate": 0.1442,
+        "woe": -0.1853
+      },
+      {
+        "bin": "(1502.61, 8151.33]",
+        "count": 853,
+        "events": 141,
+        "non_events": 712,
+        "event_rate": 0.1653,
+        "woe": -0.3463
+      },
+      {
+        "bin": "(190.65, 284.68]",
+        "count": 853,
+        "events": 89,
+        "non_events": 764,
+        "event_rate": 0.1043,
+        "woe": 0.1822
+      },
+      {
+        "bin": "(284.68, 367.63]",
+        "count": 853,
+        "events": 93,
+        "non_events": 760,
+        "event_rate": 0.109,
+        "woe": 0.1333
+      },
+      {
+        "bin": "(367.63, 467.86]",
+        "count": 853,
+        "events": 97,
+        "non_events": 756,
+        "event_rate": 0.1137,
+        "woe": 0.0861
+      },
+      {
+        "bin": "(44.929, 190.65]",
+        "count": 854,
+        "events": 76,
+        "non_events": 778,
+        "event_rate": 0.089,
+        "woe": 0.3573
+      },
+      {
+        "bin": "(467.86, 576.93]",
+        "count": 853,
+        "events": 90,
+        "non_events": 763,
+        "event_rate": 0.1055,
+        "woe": 0.1698
+      },
+      {
+        "bin": "(576.93, 707.98]",
+        "count": 853,
+        "events": 104,
+        "non_events": 749,
+        "event_rate": 0.1219,
+        "woe": 0.0075
+      },
+      {
+        "bin": "(707.98, 874.19]",
+        "count": 853,
+        "events": 109,
+        "non_events": 744,
+        "event_rate": 0.1278,
+        "woe": -0.046
+      },
+      {
+        "bin": "(874.19, 1089.55]",
+        "count": 853,
+        "events": 125,
+        "non_events": 728,
+        "event_rate": 0.1465,
+        "woe": -0.2041
       }
     ],
     "has_collateral": [
       {
         "bin": "0",
-        "count": 5437,
-        "events": 674,
-        "non_events": 4763,
-        "event_rate": 0.124,
-        "woe": -0.1026
+        "count": 5530,
+        "events": 759,
+        "non_events": 4771,
+        "event_rate": 0.1373,
+        "woe": -0.1283
       },
       {
         "bin": "1",
-        "count": 2963,
-        "events": 277,
-        "non_events": 2686,
-        "event_rate": 0.0935,
-        "woe": 0.2128
+        "count": 3001,
+        "events": 288,
+        "non_events": 2713,
+        "event_rate": 0.096,
+        "woe": 0.2753
+      }
+    ],
+    "years_in_business": [
+      {
+        "bin": "(-0.001, 0.4]",
+        "count": 904,
+        "events": 148,
+        "non_events": 756,
+        "event_rate": 0.1637,
+        "woe": -0.3346
+      },
+      {
+        "bin": "(0.4, 0.9]",
+        "count": 911,
+        "events": 124,
+        "non_events": 787,
+        "event_rate": 0.1361,
+        "woe": -0.1182
+      },
+      {
+        "bin": "(0.9, 1.4]",
+        "count": 774,
+        "events": 89,
+        "non_events": 685,
+        "event_rate": 0.115,
+        "woe": 0.0732
+      },
+      {
+        "bin": "(1.4, 2.0]",
+        "count": 860,
+        "events": 107,
+        "non_events": 753,
+        "event_rate": 0.1244,
+        "woe": -0.0155
+      },
+      {
+        "bin": "(2.0, 2.7]",
+        "count": 831,
+        "events": 84,
+        "non_events": 747,
+        "event_rate": 0.1011,
+        "woe": 0.2172
+      },
+      {
+        "bin": "(2.7, 3.6]",
+        "count": 841,
+        "events": 91,
+        "non_events": 750,
+        "event_rate": 0.1082,
+        "woe": 0.1417
+      },
+      {
+        "bin": "(3.6, 4.8]",
+        "count": 851,
+        "events": 86,
+        "non_events": 765,
+        "event_rate": 0.1011,
+        "woe": 0.2176
+      },
+      {
+        "bin": "(4.8, 6.5]",
+        "count": 874,
+        "events": 105,
+        "non_events": 769,
+        "event_rate": 0.1201,
+        "woe": 0.0243
+      },
+      {
+        "bin": "(6.5, 9.2]",
+        "count": 841,
+        "events": 116,
+        "non_events": 725,
+        "event_rate": 0.1379,
+        "woe": -0.1338
+      },
+      {
+        "bin": "(9.2, 30.0]",
+        "count": 844,
+        "events": 97,
+        "non_events": 747,
+        "event_rate": 0.1149,
+        "woe": 0.0741
+      }
+    ],
+    "loan_term_months": [
+      {
+        "bin": "12",
+        "count": 2536,
+        "events": 295,
+        "non_events": 2241,
+        "event_rate": 0.1163,
+        "woe": 0.0619
+      },
+      {
+        "bin": "18",
+        "count": 1052,
+        "events": 97,
+        "non_events": 955,
+        "event_rate": 0.0922,
+        "woe": 0.318
+      },
+      {
+        "bin": "24",
+        "count": 715,
+        "events": 76,
+        "non_events": 639,
+        "event_rate": 0.1063,
+        "woe": 0.159
+      },
+      {
+        "bin": "3",
+        "count": 850,
+        "events": 123,
+        "non_events": 727,
+        "event_rate": 0.1447,
+        "woe": -0.191
+      },
+      {
+        "bin": "6",
+        "count": 2099,
+        "events": 303,
+        "non_events": 1796,
+        "event_rate": 0.1444,
+        "woe": -0.1862
+      },
+      {
+        "bin": "9",
+        "count": 1279,
+        "events": 153,
+        "non_events": 1126,
+        "event_rate": 0.1196,
+        "woe": 0.0288
       }
     ]
   },
@@ -589,137 +589,144 @@
     "pdo": 20,
     "factor": 28.8539,
     "offset": 487.1229,
-    "intercept": -1.958634,
+    "intercept": -1.927315,
     "features": [
       {
+        "feature": "dti_ratio",
+        "coefficient": 0.0
+      },
+      {
         "feature": "previous_defaults",
-        "coefficient": -0.901909
+        "coefficient": -0.850632
       },
       {
         "feature": "dpd_history_days",
-        "coefficient": -0.505198
+        "coefficient": -0.424812
       },
       {
-        "feature": "dti_ratio",
-        "coefficient": -0.662175
+        "feature": "group_lending",
+        "coefficient": -1.005965
       },
       {
         "feature": "loan_amount_usd",
         "coefficient": 0.0
       },
       {
-        "feature": "loan_term_months",
-        "coefficient": -0.913329
+        "feature": "has_collateral",
+        "coefficient": -0.994783
       },
       {
         "feature": "years_in_business",
-        "coefficient": -1.019722
+        "coefficient": -0.925415
       },
       {
-        "feature": "group_lending",
-        "coefficient": -0.976478
+        "feature": "loan_term_months",
+        "coefficient": -1.071997
       },
       {
-        "feature": "has_collateral",
-        "coefficient": -0.974176
+        "feature": "previous_loans",
+        "coefficient": -0.407716
       },
       {
         "feature": "interest_rate_pct",
-        "coefficient": -0.461926
+        "coefficient": 0.0
       }
     ]
   },
   "validation": {
-    "train_gini": 0.3082,
-    "test_gini": 0.2479,
+    "train_gini": 0.2863,
+    "test_gini": 0.2684,
     "train_ks": {
-      "ks": 0.2302,
-      "threshold": 0.1139,
-      "fpr_at_ks": 0.3387,
-      "tpr_at_ks": 0.5689
+      "ks": 0.2137,
+      "threshold": 0.1299,
+      "fpr_at_ks": 0.3222,
+      "tpr_at_ks": 0.5358
     },
     "test_ks": {
-      "ks": 0.2055,
-      "threshold": 0.1168,
-      "fpr_at_ks": 0.3007,
-      "tpr_at_ks": 0.5061
+      "ks": 0.2122,
+      "threshold": 0.1387,
+      "fpr_at_ks": 0.2461,
+      "tpr_at_ks": 0.4583
     },
     "psi": {
-      "psi": 0.0079,
+      "psi": 0.002,
       "interpretation": "Stable",
       "bins": [
         {
           "bin_low": null,
-          "bin_high": 502.7,
-          "expected_pct": 0.0026,
-          "actual_pct": 0.0018,
-          "psi_component": 0.000322
+          "bin_high": 502.4,
+          "expected_pct": 0.0015,
+          "actual_pct": 0.0024,
+          "psi_component": 0.000421
         },
         {
-          "bin_low": 502.7,
-          "bin_high": 512.2,
-          "expected_pct": 0.0111,
-          "actual_pct": 0.0087,
-          "psi_component": 0.000557
+          "bin_low": 502.4,
+          "bin_high": 511.09,
+          "expected_pct": 0.0117,
+          "actual_pct": 0.0113,
+          "psi_component": 1.1e-05
         },
         {
-          "bin_low": 512.2,
-          "bin_high": 521.7,
-          "expected_pct": 0.0426,
-          "actual_pct": 0.0345,
-          "psi_component": 0.001689
+          "bin_low": 511.09,
+          "bin_high": 519.79,
+          "expected_pct": 0.0289,
+          "actual_pct": 0.0269,
+          "psi_component": 0.000147
         },
         {
-          "bin_low": 521.7,
-          "bin_high": 531.21,
-          "expected_pct": 0.073,
-          "actual_pct": 0.0632,
-          "psi_component": 0.001414
+          "bin_low": 519.79,
+          "bin_high": 528.48,
+          "expected_pct": 0.0612,
+          "actual_pct": 0.0592,
+          "psi_component": 6.5e-05
         },
         {
-          "bin_low": 531.21,
-          "bin_high": 540.71,
-          "expected_pct": 0.0991,
-          "actual_pct": 0.1051,
-          "psi_component": 0.000347
+          "bin_low": 528.48,
+          "bin_high": 537.17,
+          "expected_pct": 0.1326,
+          "actual_pct": 0.1388,
+          "psi_component": 0.000283
         },
         {
-          "bin_low": 540.71,
-          "bin_high": 550.22,
-          "expected_pct": 0.2205,
-          "actual_pct": 0.2257,
-          "psi_component": 0.000121
+          "bin_low": 537.17,
+          "bin_high": 545.87,
+          "expected_pct": 0.2166,
+          "actual_pct": 0.2088,
+          "psi_component": 0.000286
         },
         {
-          "bin_low": 550.22,
-          "bin_high": 559.72,
-          "expected_pct": 0.2977,
-          "actual_pct": 0.3059,
-          "psi_component": 0.000224
+          "bin_low": 545.87,
+          "bin_high": 554.56,
+          "expected_pct": 0.252,
+          "actual_pct": 0.2541,
+          "psi_component": 1.7e-05
         },
         {
-          "bin_low": 559.72,
-          "bin_high": 569.22,
-          "expected_pct": 0.1889,
-          "actual_pct": 0.1959,
-          "psi_component": 0.000256
+          "bin_low": 554.56,
+          "bin_high": 563.25,
+          "expected_pct": 0.1984,
+          "actual_pct": 0.2036,
+          "psi_component": 0.000134
         },
         {
-          "bin_low": 569.22,
-          "bin_high": 578.73,
-          "expected_pct": 0.0551,
-          "actual_pct": 0.0545,
-          "psi_component": 6e-06
+          "bin_low": 563.25,
+          "bin_high": 571.95,
+          "expected_pct": 0.0819,
+          "actual_pct": 0.0774,
+          "psi_component": 0.000262
         },
         {
-          "bin_low": 578.73,
+          "bin_low": 571.95,
           "bin_high": null,
-          "expected_pct": 0.0105,
-          "actual_pct": 0.0057,
-          "psi_component": 0.002951
+          "expected_pct": 0.0162,
+          "actual_pct": 0.0185,
+          "psi_component": 0.00033
         }
       ],
-      "scope": "same-period random split, not temporal drift"
+      "scope": "earlier vintages vs later vintages",
+      "train_default_rate": 0.1227,
+      "test_default_rate": 0.1591,
+      "default_rate_shift": 0.0364
     },
     "roc_curve": [
       {
@@ -727,392 +734,394 @@
         "tpr": 0.0
       },
       {
-        "fpr": 0.0116,
-        "tpr": 0.0246
+        "fpr": 0.0106,
+        "tpr": 0.0308
       },
       {
-        "fpr": 0.0229,
-        "tpr": 0.059
+        "fpr": 0.0226,
+        "tpr": 0.0562
       },
       {
-        "fpr": 0.0354,
-        "tpr": 0.086
+        "fpr": 0.0326,
+        "tpr": 0.0833
       },
       {
-        "fpr": 0.0489,
-        "tpr": 0.1204
+        "fpr": 0.0439,
+        "tpr": 0.1196
       },
       {
-        "fpr": 0.0595,
-        "tpr": 0.1278
+        "fpr": 0.0501,
+        "tpr": 0.163
       },
       {
-        "fpr": 0.072,
-        "tpr": 0.1646
+        "fpr": 0.0617,
+        "tpr": 0.1902
       },
       {
-        "fpr": 0.0886,
-        "tpr": 0.1941
+        "fpr": 0.0764,
+        "tpr": 0.2101
       },
       {
-        "fpr": 0.1005,
-        "tpr": 0.226
+        "fpr": 0.0926,
+        "tpr": 0.2391
       },
       {
-        "fpr": 0.1184,
-        "tpr": 0.2531
+        "fpr": 0.109,
+        "tpr": 0.2717
       },
       {
-        "fpr": 0.1347,
-        "tpr": 0.2752
+        "fpr": 0.1248,
+        "tpr": 0.3007
       },
       {
-        "fpr": 0.1528,
-        "tpr": 0.2948
+        "fpr": 0.144,
+        "tpr": 0.317
       },
       {
-        "fpr": 0.1701,
-        "tpr": 0.3145
+        "fpr": 0.1584,
+        "tpr": 0.3533
       },
       {
-        "fpr": 0.1826,
-        "tpr": 0.3464
+        "fpr": 0.1783,
+        "tpr": 0.3732
       },
       {
-        "fpr": 0.212,
-        "tpr": 0.3882
+        "fpr": 0.194,
+        "tpr": 0.3931
       },
       {
-        "fpr": 0.2249,
-        "tpr": 0.4128
+        "fpr": 0.2112,
+        "tpr": 0.4203
       },
       {
-        "fpr": 0.2471,
-        "tpr": 0.4398
+        "fpr": 0.2321,
+        "tpr": 0.4348
       },
       {
-        "fpr": 0.2706,
-        "tpr": 0.4693
+        "fpr": 0.2472,
+        "tpr": 0.4583
       },
       {
-        "fpr": 0.2878,
-        "tpr": 0.4816
+        "fpr": 0.2667,
+        "tpr": 0.4728
       },
       {
-        "fpr": 0.3079,
-        "tpr": 0.5086
+        "fpr": 0.2941,
+        "tpr": 0.5
       },
       {
-        "fpr": 0.337,
-        "tpr": 0.5307
+        "fpr": 0.313,
+        "tpr": 0.5145
       },
       {
-        "fpr": 0.3542,
-        "tpr": 0.5479
+        "fpr": 0.3318,
+        "tpr": 0.529
+      },
+      {
+        "fpr": 0.3538,
+        "tpr": 0.5471
       },
       {
         "fpr": 0.3768,
-        "tpr": 0.5676
+        "tpr": 0.5743
       },
       {
-        "fpr": 0.3956,
-        "tpr": 0.5774
+        "fpr": 0.3984,
+        "tpr": 0.5924
       },
       {
-        "fpr": 0.4162,
-        "tpr": 0.6044
+        "fpr": 0.4165,
+        "tpr": 0.6105
       },
       {
-        "fpr": 0.4319,
-        "tpr": 0.6241
+        "fpr": 0.4347,
+        "tpr": 0.6268
       },
       {
-        "fpr": 0.4792,
-        "tpr": 0.6585
+        "fpr": 0.4662,
+        "tpr": 0.6486
       },
       {
-        "fpr": 0.4973,
+        "fpr": 0.493,
+        "tpr": 0.6703
+      },
+      {
+        "fpr": 0.5118,
         "tpr": 0.6757
       },
       {
-        "fpr": 0.5205,
-        "tpr": 0.6806
+        "fpr": 0.5303,
+        "tpr": 0.6938
       },
       {
-        "fpr": 0.5443,
-        "tpr": 0.6904
+        "fpr": 0.5554,
+        "tpr": 0.7156
       },
       {
-        "fpr": 0.565,
-        "tpr": 0.7052
+        "fpr": 0.5735,
+        "tpr": 0.7319
       },
       {
-        "fpr": 0.5941,
-        "tpr": 0.7273
+        "fpr": 0.5907,
+        "tpr": 0.7591
       },
       {
-        "fpr": 0.611,
-        "tpr": 0.7445
+        "fpr": 0.6167,
+        "tpr": 0.7754
       },
       {
-        "fpr": 0.6279,
-        "tpr": 0.7543
+        "fpr": 0.6383,
+        "tpr": 0.788
       },
       {
-        "fpr": 0.6633,
-        "tpr": 0.7862
+        "fpr": 0.6706,
+        "tpr": 0.8043
       },
       {
-        "fpr": 0.6799,
-        "tpr": 0.7985
+        "fpr": 0.7007,
+        "tpr": 0.8152
       },
       {
-        "fpr": 0.6981,
-        "tpr": 0.8059
+        "fpr": 0.7316,
+        "tpr": 0.8333
       },
       {
-        "fpr": 0.7175,
-        "tpr": 0.8133
+        "fpr": 0.7497,
+        "tpr": 0.8496
       },
       {
-        "fpr": 0.7341,
-        "tpr": 0.8231
+        "fpr": 0.7758,
+        "tpr": 0.8605
       },
       {
-        "fpr": 0.7485,
-        "tpr": 0.8403
+        "fpr": 0.795,
+        "tpr": 0.8804
       },
       {
-        "fpr": 0.7811,
-        "tpr": 0.8747
+        "fpr": 0.819,
+        "tpr": 0.8877
       },
       {
-        "fpr": 0.8039,
-        "tpr": 0.8894
+        "fpr": 0.8406,
+        "tpr": 0.904
       },
       {
-        "fpr": 0.8193,
-        "tpr": 0.9091
+        "fpr": 0.8653,
+        "tpr": 0.9203
       },
       {
-        "fpr": 0.8331,
-        "tpr": 0.9165
+        "fpr": 0.8903,
+        "tpr": 0.9275
       },
       {
-        "fpr": 0.849,
-        "tpr": 0.9214
+        "fpr": 0.9122,
+        "tpr": 0.9475
       },
       {
-        "fpr": 0.8801,
-        "tpr": 0.941
+        "fpr": 0.9335,
+        "tpr": 0.9601
       },
       {
-        "fpr": 0.9013,
-        "tpr": 0.9484
+        "fpr": 0.9606,
+        "tpr": 0.9728
       },
       {
-        "fpr": 0.9201,
-        "tpr": 0.9558
+        "fpr": 0.9784,
+        "tpr": 0.9873
       },
       {
-        "fpr": 0.9383,
-        "tpr": 0.9607
-      },
-      {
-        "fpr": 0.9593,
-        "tpr": 0.9754
-      },
-      {
-        "fpr": 0.9768,
-        "tpr": 0.9853
-      },
-      {
-        "fpr": 0.9937,
-        "tpr": 0.9902
+        "fpr": 0.9986,
+        "tpr": 0.9982
       }
     ],
     "ks_curve": [
       {
-        "probability": 0.0324,
+        "probability": 0.0376,
         "cum_bad_pct": 0.0,
         "cum_good_pct": 0.0003,
         "ks_gap": 0.0003
       },
       {
-        "probability": 0.0534,
+        "probability": 0.0598,
         "cum_bad_pct": 0.0344,
-        "cum_good_pct": 0.0523,
-        "ks_gap": 0.0179
+        "cum_good_pct": 0.0531,
+        "ks_gap": 0.0187
       },
       {
-        "probability": 0.0597,
-        "cum_bad_pct": 0.0565,
+        "probability": 0.067,
+        "cum_bad_pct": 0.0688,
         "cum_good_pct": 0.1059,
-        "ks_gap": 0.0493
+        "ks_gap": 0.0371
       },
       {
-        "probability": 0.0646,
-        "cum_bad_pct": 0.0786,
-        "cum_good_pct": 0.1594,
-        "ks_gap": 0.0808
+        "probability": 0.0737,
+        "cum_bad_pct": 0.0978,
+        "cum_good_pct": 0.1598,
+        "ks_gap": 0.0619
       },
       {
-        "probability": 0.0705,
-        "cum_bad_pct": 0.1229,
-        "cum_good_pct": 0.2101,
-        "ks_gap": 0.0873
+        "probability": 0.08,
+        "cum_bad_pct": 0.1268,
+        "cum_good_pct": 0.2136,
+        "ks_gap": 0.0868
       },
       {
-        "probability": 0.074,
-        "cum_bad_pct": 0.1671,
-        "cum_good_pct": 0.2609,
-        "ks_gap": 0.0938
+        "probability": 0.0853,
+        "cum_bad_pct": 0.163,
+        "cum_good_pct": 0.266,
+        "ks_gap": 0.103
       },
       {
-        "probability": 0.0793,
-        "cum_bad_pct": 0.1966,
-        "cum_good_pct": 0.3135,
-        "ks_gap": 0.1169
+        "probability": 0.0881,
+        "cum_bad_pct": 0.1957,
+        "cum_good_pct": 0.3192,
+        "ks_gap": 0.1235
       },
       {
-        "probability": 0.0827,
-        "cum_bad_pct": 0.2359,
-        "cum_good_pct": 0.3649,
-        "ks_gap": 0.129
+        "probability": 0.0928,
+        "cum_bad_pct": 0.2192,
+        "cum_good_pct": 0.374,
+        "ks_gap": 0.1548
       },
       {
-        "probability": 0.0868,
-        "cum_bad_pct": 0.2776,
-        "cum_good_pct": 0.4159,
-        "ks_gap": 0.1383
+        "probability": 0.0984,
+        "cum_bad_pct": 0.2645,
+        "cum_good_pct": 0.4248,
+        "ks_gap": 0.1603
       },
       {
-        "probability": 0.0909,
-        "cum_bad_pct": 0.312,
-        "cum_good_pct": 0.4679,
-        "ks_gap": 0.1559
+        "probability": 0.1038,
+        "cum_bad_pct": 0.3134,
+        "cum_good_pct": 0.4748,
+        "ks_gap": 0.1614
       },
       {
-        "probability": 0.0966,
-        "cum_bad_pct": 0.3415,
-        "cum_good_pct": 0.5205,
-        "ks_gap": 0.179
+        "probability": 0.1108,
+        "cum_bad_pct": 0.346,
+        "cum_good_pct": 0.5279,
+        "ks_gap": 0.1819
       },
       {
-        "probability": 0.0996,
-        "cum_bad_pct": 0.3808,
-        "cum_good_pct": 0.5719,
-        "ks_gap": 0.191
+        "probability": 0.1147,
+        "cum_bad_pct": 0.3877,
+        "cum_good_pct": 0.5794,
+        "ks_gap": 0.1917
       },
       {
-        "probability": 0.1065,
-        "cum_bad_pct": 0.4324,
-        "cum_good_pct": 0.6217,
-        "ks_gap": 0.1892
+        "probability": 0.1218,
+        "cum_bad_pct": 0.4312,
+        "cum_good_pct": 0.6304,
+        "ks_gap": 0.1993
       },
       {
-        "probability": 0.1141,
-        "cum_bad_pct": 0.4767,
-        "cum_good_pct": 0.6724,
-        "ks_gap": 0.1957
+        "probability": 0.1289,
+        "cum_bad_pct": 0.4764,
+        "cum_good_pct": 0.6812,
+        "ks_gap": 0.2047
       },
       {
-        "probability": 0.1199,
-        "cum_bad_pct": 0.5233,
-        "cum_good_pct": 0.7228,
-        "ks_gap": 0.1995
+        "probability": 0.1352,
+        "cum_bad_pct": 0.5272,
+        "cum_good_pct": 0.7309,
+        "ks_gap": 0.2037
       },
       {
-        "probability": 0.1292,
-        "cum_bad_pct": 0.5848,
-        "cum_good_pct": 0.7714,
-        "ks_gap": 0.1866
+        "probability": 0.1457,
+        "cum_bad_pct": 0.5761,
+        "cum_good_pct": 0.7809,
+        "ks_gap": 0.2049
       },
       {
-        "probability": 0.1385,
-        "cum_bad_pct": 0.656,
-        "cum_good_pct": 0.8187,
-        "ks_gap": 0.1626
+        "probability": 0.1597,
+        "cum_bad_pct": 0.6359,
+        "cum_good_pct": 0.8289,
+        "ks_gap": 0.1931
       },
       {
-        "probability": 0.158,
-        "cum_bad_pct": 0.7248,
-        "cum_good_pct": 0.8663,
-        "ks_gap": 0.1415
+        "probability": 0.1726,
+        "cum_bad_pct": 0.6993,
+        "cum_good_pct": 0.8762,
+        "ks_gap": 0.177
       },
       {
-        "probability": 0.1841,
-        "cum_bad_pct": 0.8084,
-        "cum_good_pct": 0.912,
-        "ks_gap": 0.1036
+        "probability": 0.191,
+        "cum_bad_pct": 0.7826,
+        "cum_good_pct": 0.9198,
+        "ks_gap": 0.1372
       },
       {
-        "probability": 0.2236,
-        "cum_bad_pct": 0.8968,
-        "cum_good_pct": 0.9571,
-        "ks_gap": 0.0603
+        "probability": 0.232,
+        "cum_bad_pct": 0.8931,
+        "cum_good_pct": 0.9582,
+        "ks_gap": 0.0651
+      },
+      {
+        "probability": 0.3594,
+        "cum_bad_pct": 0.9946,
+        "cum_good_pct": 0.9983,
+        "ks_gap": 0.0037
       }
     ],
     "score_distribution": [
       {
-        "band": "(493.101, 502.388]",
-        "count": 6,
-        "defaults": 2,
-        "default_rate": 0.3333333333333333
+        "band": "(495.6, 504.18]",
+        "count": 9,
+        "defaults": 4,
+        "default_rate": 0.4444444444444444
       },
       {
-        "band": "(502.388, 511.583]",
-        "count": 26,
-        "defaults": 5,
-        "default_rate": 0.19230769230769232
+        "band": "(504.18, 512.676]",
+        "count": 62,
+        "defaults": 17,
+        "default_rate": 0.27419354838709675
       },
       {
-        "band": "(511.583, 520.779]",
-        "count": 113,
+        "band": "(512.676, 521.172]",
+        "count": 106,
+        "defaults": 36,
+        "default_rate": 0.33962264150943394
+      },
+      {
+        "band": "(521.172, 529.667]",
+        "count": 217,
+        "defaults": 74,
+        "default_rate": 0.34101382488479265
+      },
+      {
+        "band": "(529.667, 538.163]",
+        "count": 481,
+        "defaults": 104,
+        "default_rate": 0.21621621621621623
+      },
+      {
+        "band": "(538.163, 546.658]",
+        "count": 761,
+        "defaults": 112,
+        "default_rate": 0.1471747700394218
+      },
+      {
+        "band": "(546.658, 555.154]",
+        "count": 895,
+        "defaults": 108,
+        "default_rate": 0.12067039106145251
+      },
+      {
+        "band": "(555.154, 563.65]",
+        "count": 617,
+        "defaults": 64,
+        "default_rate": 0.10372771474878444
+      },
+      {
+        "band": "(563.65, 572.145]",
+        "count": 262,
         "defaults": 28,
-        "default_rate": 0.24778761061946902
+        "default_rate": 0.10687022900763359
       },
       {
-        "band": "(520.779, 529.974]",
-        "count": 212,
-        "defaults": 43,
-        "default_rate": 0.2028301886792453
-      },
-      {
-        "band": "(529.974, 539.169]",
-        "count": 331,
-        "defaults": 57,
-        "default_rate": 0.17220543806646527
-      },
-      {
-        "band": "(539.169, 548.364]",
-        "count": 738,
-        "defaults": 96,
-        "default_rate": 0.13008130081300814
-      },
-      {
-        "band": "(548.364, 557.559]",
-        "count": 1047,
-        "defaults": 94,
-        "default_rate": 0.08978032473734479
-      },
-      {
-        "band": "(557.559, 566.754]",
-        "count": 787,
-        "defaults": 61,
-        "default_rate": 0.07750952986022872
-      },
-      {
-        "band": "(566.754, 575.95]",
-        "count": 283,
-        "defaults": 15,
-        "default_rate": 0.053003533568904596
-      },
-      {
-        "band": "(575.95, 585.145]",
-        "count": 57,
-        "defaults": 6,
-        "default_rate": 0.10526315789473684
+        "band": "(572.145, 580.641]",
+        "count": 59,
+        "defaults": 5,
+        "default_rate": 0.0847457627118644
       }
     ]
   },
@@ -1121,186 +1130,186 @@
       "scenario": "Baseline",
       "description": "Current economic conditions",
       "income_shock_pct": 0.0,
-      "stressed_pd": 0.1132,
-      "expected_loss_usd": 488587.22,
-      "capital_required_usd": 732880.83,
-      "loss_rate_pct": 6.22
+      "stressed_pd": 0.1332,
+      "expected_loss_usd": 690953.07,
+      "capital_required_usd": 1036429.61,
+      "loss_rate_pct": 7.33
     },
     {
       "scenario": "Mild Stress",
       "description": "Moderate slowdown: 10% income drop, 30% rise in defaults",
       "income_shock_pct": -10.0,
-      "stressed_pd": 0.1471,
-      "expected_loss_usd": 635163.39,
-      "capital_required_usd": 952745.08,
-      "loss_rate_pct": 8.09
+      "stressed_pd": 0.1732,
+      "expected_loss_usd": 898238.99,
+      "capital_required_usd": 1347358.49,
+      "loss_rate_pct": 9.53
     },
     {
       "scenario": "Severe Stress",
       "description": "Regional crisis: 25% income drop, currency devaluation, crop failure",
       "income_shock_pct": -25.0,
-      "stressed_pd": 0.2037,
-      "expected_loss_usd": 879456.99,
-      "capital_required_usd": 1319185.49,
-      "loss_rate_pct": 11.2
+      "stressed_pd": 0.2398,
+      "expected_loss_usd": 1243715.53,
+      "capital_required_usd": 1865573.3,
+      "loss_rate_pct": 13.19
     },
     {
       "scenario": "Extreme",
       "description": "Pandemic-scale disruption: 40% income drop, supply chain collapse",
       "income_shock_pct": -40.0,
-      "stressed_pd": 0.2829,
-      "expected_loss_usd": 1221468.05,
-      "capital_required_usd": 1832202.07,
-      "loss_rate_pct": 15.56
+      "stressed_pd": 0.3331,
+      "expected_loss_usd": 1727382.68,
+      "capital_required_usd": 2591074.02,
+      "loss_rate_pct": 18.32
     }
   ],
   "stress_by_band": {
     "Baseline": [
       {
-        "band": "(493.192, 539.866]",
-        "count": 721,
-        "base_defaults": 141,
-        "base_default_rate": 0.1956,
-        "stressed_default_rate": 0.1956
+        "band": "(495.684, 534.937]",
+        "count": 694,
+        "base_defaults": 200,
+        "base_default_rate": 0.2882,
+        "stressed_default_rate": 0.2882
       },
       {
-        "band": "(539.866, 548.506]",
-        "count": 725,
-        "base_defaults": 90,
-        "base_default_rate": 0.1241,
-        "stressed_default_rate": 0.1241
+        "band": "(534.937, 544.128]",
+        "count": 710,
+        "base_defaults": 117,
+        "base_default_rate": 0.1648,
+        "stressed_default_rate": 0.1648
       },
       {
-        "band": "(548.506, 555.057]",
-        "count": 714,
-        "base_defaults": 63,
-        "base_default_rate": 0.0882,
-        "stressed_default_rate": 0.0882
+        "band": "(544.128, 551.043]",
+        "count": 677,
+        "base_defaults": 88,
+        "base_default_rate": 0.13,
+        "stressed_default_rate": 0.13
       },
       {
-        "band": "(555.057, 561.537]",
-        "count": 733,
-        "base_defaults": 64,
-        "base_default_rate": 0.0873,
-        "stressed_default_rate": 0.0873
+        "band": "(551.043, 557.606]",
+        "count": 694,
+        "base_defaults": 77,
+        "base_default_rate": 0.111,
+        "stressed_default_rate": 0.111
       },
       {
-        "band": "(561.537, 585.145]",
-        "count": 707,
-        "base_defaults": 49,
-        "base_default_rate": 0.0693,
-        "stressed_default_rate": 0.0693
+        "band": "(557.606, 580.641]",
+        "count": 694,
+        "base_defaults": 70,
+        "base_default_rate": 0.1009,
+        "stressed_default_rate": 0.1009
       }
     ],
     "Mild Stress": [
       {
-        "band": "(493.192, 539.866]",
-        "count": 721,
-        "base_defaults": 141,
-        "base_default_rate": 0.1956,
-        "stressed_default_rate": 0.2542
+        "band": "(495.684, 534.937]",
+        "count": 694,
+        "base_defaults": 200,
+        "base_default_rate": 0.2882,
+        "stressed_default_rate": 0.3746
       },
       {
-        "band": "(539.866, 548.506]",
-        "count": 725,
-        "base_defaults": 90,
-        "base_default_rate": 0.1241,
-        "stressed_default_rate": 0.1614
+        "band": "(534.937, 544.128]",
+        "count": 710,
+        "base_defaults": 117,
+        "base_default_rate": 0.1648,
+        "stressed_default_rate": 0.2142
       },
       {
-        "band": "(548.506, 555.057]",
-        "count": 714,
-        "base_defaults": 63,
-        "base_default_rate": 0.0882,
-        "stressed_default_rate": 0.1147
+        "band": "(544.128, 551.043]",
+        "count": 677,
+        "base_defaults": 88,
+        "base_default_rate": 0.13,
+        "stressed_default_rate": 0.169
       },
       {
-        "band": "(555.057, 561.537]",
-        "count": 733,
-        "base_defaults": 64,
-        "base_default_rate": 0.0873,
-        "stressed_default_rate": 0.1135
+        "band": "(551.043, 557.606]",
+        "count": 694,
+        "base_defaults": 77,
+        "base_default_rate": 0.111,
+        "stressed_default_rate": 0.1442
       },
       {
-        "band": "(561.537, 585.145]",
-        "count": 707,
-        "base_defaults": 49,
-        "base_default_rate": 0.0693,
-        "stressed_default_rate": 0.0901
+        "band": "(557.606, 580.641]",
+        "count": 694,
+        "base_defaults": 70,
+        "base_default_rate": 0.1009,
+        "stressed_default_rate": 0.1311
       }
     ],
     "Severe Stress": [
       {
-        "band": "(493.192, 539.866]",
-        "count": 721,
-        "base_defaults": 141,
-        "base_default_rate": 0.1956,
-        "stressed_default_rate": 0.352
+        "band": "(495.684, 534.937]",
+        "count": 694,
+        "base_defaults": 200,
+        "base_default_rate": 0.2882,
+        "stressed_default_rate": 0.5187
       },
       {
-        "band": "(539.866, 548.506]",
-        "count": 725,
-        "base_defaults": 90,
-        "base_default_rate": 0.1241,
-        "stressed_default_rate": 0.2234
+        "band": "(534.937, 544.128]",
+        "count": 710,
+        "base_defaults": 117,
+        "base_default_rate": 0.1648,
+        "stressed_default_rate": 0.2966
       },
       {
-        "band": "(548.506, 555.057]",
-        "count": 714,
-        "base_defaults": 63,
-        "base_default_rate": 0.0882,
-        "stressed_default_rate": 0.1588
+        "band": "(544.128, 551.043]",
+        "count": 677,
+        "base_defaults": 88,
+        "base_default_rate": 0.13,
+        "stressed_default_rate": 0.234
       },
       {
-        "band": "(555.057, 561.537]",
-        "count": 733,
-        "base_defaults": 64,
-        "base_default_rate": 0.0873,
-        "stressed_default_rate": 0.1572
+        "band": "(551.043, 557.606]",
+        "count": 694,
+        "base_defaults": 77,
+        "base_default_rate": 0.111,
+        "stressed_default_rate": 0.1997
       },
       {
-        "band": "(561.537, 585.145]",
-        "count": 707,
-        "base_defaults": 49,
-        "base_default_rate": 0.0693,
-        "stressed_default_rate": 0.1248
+        "band": "(557.606, 580.641]",
+        "count": 694,
+        "base_defaults": 70,
+        "base_default_rate": 0.1009,
+        "stressed_default_rate": 0.1816
       }
     ],
     "Extreme": [
       {
-        "band": "(493.192, 539.866]",
-        "count": 721,
-        "base_defaults": 141,
-        "base_default_rate": 0.1956,
-        "stressed_default_rate": 0.4889
+        "band": "(495.684, 534.937]",
+        "count": 694,
+        "base_defaults": 200,
+        "base_default_rate": 0.2882,
+        "stressed_default_rate": 0.7205
       },
       {
-        "band": "(539.866, 548.506]",
-        "count": 725,
-        "base_defaults": 90,
-        "base_default_rate": 0.1241,
-        "stressed_default_rate": 0.3103
+        "band": "(534.937, 544.128]",
+        "count": 710,
+        "base_defaults": 117,
+        "base_default_rate": 0.1648,
+        "stressed_default_rate": 0.412
       },
       {
-        "band": "(548.506, 555.057]",
-        "count": 714,
-        "base_defaults": 63,
-        "base_default_rate": 0.0882,
-        "stressed_default_rate": 0.2206
+        "band": "(544.128, 551.043]",
+        "count": 677,
+        "base_defaults": 88,
+        "base_default_rate": 0.13,
+        "stressed_default_rate": 0.325
       },
       {
-        "band": "(555.057, 561.537]",
-        "count": 733,
-        "base_defaults": 64,
-        "base_default_rate": 0.0873,
-        "stressed_default_rate": 0.2183
+        "band": "(551.043, 557.606]",
+        "count": 694,
+        "base_defaults": 77,
+        "base_default_rate": 0.111,
+        "stressed_default_rate": 0.2774
       },
       {
-        "band": "(561.537, 585.145]",
-        "count": 707,
-        "base_defaults": 49,
-        "base_default_rate": 0.0693,
-        "stressed_default_rate": 0.1733
+        "band": "(557.606, 580.641]",
+        "count": 694,
+        "base_defaults": 70,
+        "base_default_rate": 0.1009,
+        "stressed_default_rate": 0.2522
       }
     ]
   }

@@ -24,7 +24,37 @@ GENDER = ["M", "F"]
 GENDER_WEIGHTS = [0.45, 0.55]  # microfinance skews female
 
 
+# Book history. Loans are spread across 36 monthly vintages so the portfolio
+# has a time axis, which is what a scorecard actually gets validated against:
+# you fit on the book you had and score the book that arrives next.
+N_VINTAGES = 36
+BOOK_START = "2022-01-01"
+
+
 def generate() -> pd.DataFrame:
+    # Vintage index 0..35, weighted so the book grows over time the way a
+    # lending portfolio does rather than arriving all at once.
+    vintage_weights = np.linspace(0.6, 1.4, N_VINTAGES)
+    vintage_weights = vintage_weights / vintage_weights.sum()
+    vintage = RNG.choice(N_VINTAGES, size=N, p=vintage_weights)
+    origination_date = pd.to_datetime(BOOK_START) + pd.to_timedelta(
+        vintage * 30, unit="D"
+    )
+
+    # Drift, stated plainly because it is an assumption of this generator and
+    # not a measurement of any real portfolio. Two things move across the book,
+    # both of which are ordinary in microfinance:
+    #   1. underwriting loosens as the book grows, so later vintages carry more
+    #      leverage (a higher loan-to-income multiple);
+    #   2. a macro deterioration in the back third lifts default risk for
+    #      everyone originated in that window.
+    # Without something like this the portfolio is stationary, a PSI between
+    # vintages is near zero by construction, and a time-based holdout tells you
+    # nothing that a random split did not.
+    vintage_frac = vintage / (N_VINTAGES - 1)
+    leverage_drift = 1.0 + 0.35 * vintage_frac
+    macro_stress = 0.45 * np.clip((vintage_frac - 0.65) / 0.35, 0, 1)
+
     age = RNG.integers(18, 65, size=N)
     gender = RNG.choice(GENDER, size=N, p=GENDER_WEIGHTS)
     country = RNG.choice(COUNTRIES, size=N, p=COUNTRY_WEIGHTS)
@@ -37,7 +67,7 @@ def generate() -> pd.DataFrame:
     ).round(2)
 
     # Loan amount: 1x-8x monthly income
-    loan_multiplier = RNG.uniform(1, 8, size=N)
+    loan_multiplier = RNG.uniform(1, 8, size=N) * leverage_drift
     loan_amount = (monthly_income * loan_multiplier).round(2)
 
     # Loan term in months
@@ -94,6 +124,7 @@ def generate() -> pd.DataFrame:
         + 0.15 * (loan_amount > 1000).astype(float)
         + 0.25 * (interest_rate > 35).astype(float)
         - 0.2 * (gender == "F").astype(float)
+        + macro_stress
         + RNG.normal(0, 0.3, size=N)
     )
     prob_default = 1 / (1 + np.exp(-logit))
@@ -101,6 +132,8 @@ def generate() -> pd.DataFrame:
 
     df = pd.DataFrame({
         "loan_id": np.arange(1, N + 1),
+        "origination_date": origination_date,
+        "vintage": vintage,
         "country": country,
         "gender": gender,
         "age": age,
@@ -129,4 +162,7 @@ if __name__ == "__main__":
     df.to_csv(out, index=False)
     print(f"Generated {len(df)} records -> {out}")
     print(f"Default rate: {df['default'].mean():.1%}")
+    by_v = df.groupby(df["origination_date"].dt.to_period("Q"))["default"].mean()
+    print("Default rate by quarter:")
+    print(by_v.round(3).to_string())
     print(f"Columns: {list(df.columns)}")
