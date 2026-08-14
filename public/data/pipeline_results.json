@@ -89,87 +89,87 @@
   "iv_summary": [
     {
       "feature": "previous_defaults",
-      "iv": 0.13216581777807412,
+      "iv": 0.15855735135572233,
       "strength": "Medium"
     },
     {
       "feature": "dpd_history_days",
-      "iv": 0.1305944017675036,
+      "iv": 0.15727747539604015,
       "strength": "Medium"
     },
     {
       "feature": "dti_ratio",
-      "iv": 0.11749728296431751,
+      "iv": 0.13900317326972103,
       "strength": "Medium"
     },
     {
       "feature": "loan_amount_usd",
-      "iv": 0.04579496761518746,
+      "iv": 0.05928487532006519,
       "strength": "Weak"
     },
     {
       "feature": "loan_term_months",
-      "iv": 0.0388580830392995,
-      "strength": "Weak"
-    },
-    {
-      "feature": "group_lending",
-      "iv": 0.038616402414144366,
+      "iv": 0.044629242128702326,
       "strength": "Weak"
     },
     {
       "feature": "years_in_business",
-      "iv": 0.02997593142853812,
+      "iv": 0.03545621472998371,
+      "strength": "Weak"
+    },
+    {
+      "feature": "group_lending",
+      "iv": 0.035087578004922,
       "strength": "Weak"
     },
     {
       "feature": "has_collateral",
-      "iv": 0.022988976745123582,
+      "iv": 0.021798563728292936,
       "strength": "Weak"
     },
     {
       "feature": "interest_rate_pct",
-      "iv": 0.01761437620481778,
-      "strength": "Not predictive"
+      "iv": 0.02172201624250291,
+      "strength": "Weak"
     },
     {
       "feature": "previous_loans",
-      "iv": 0.015705729760887823,
+      "iv": 0.01780379056019223,
       "strength": "Not predictive"
     },
     {
       "feature": "monthly_income_usd",
-      "iv": 0.009709864318582551,
-      "strength": "Not predictive"
-    },
-    {
-      "feature": "gender",
-      "iv": 0.007886947516866808,
-      "strength": "Not predictive"
-    },
-    {
-      "feature": "sector",
-      "iv": 0.007452000336391233,
+      "iv": 0.011739989974222821,
       "strength": "Not predictive"
     },
     {
       "feature": "loan_purpose",
-      "iv": 0.004275140899141539,
+      "iv": 0.006899948726916862,
       "strength": "Not predictive"
     },
     {
-      "feature": "dependents",
-      "iv": 0.0036251351476193653,
+      "feature": "sector",
+      "iv": 0.006870208800286258,
+      "strength": "Not predictive"
+    },
+    {
+      "feature": "gender",
+      "iv": 0.004310567584825806,
       "strength": "Not predictive"
     },
     {
       "feature": "age",
-      "iv": 0.0028467287192952026,
+      "iv": 0.002549516648243524,
+      "strength": "Not predictive"
+    },
+    {
+      "feature": "dependents",
+      "iv": 0.0012713957180883106,
       "strength": "Not predictive"
     },
     {
       "feature": "country",
-      "iv": 0.0002758997054706463,
+      "iv": 0.0010109578229864505,
       "strength": "Not predictive"
     }
   ],
@@ -177,409 +177,409 @@
     "previous_defaults": [
       {
         "bin": "0",
-        "count": 10040,
-        "events": 959,
-        "non_events": 9081,
-        "event_rate": 0.0955,
-        "woe": 0.1901
+        "count": 6991,
+        "events": 654,
+        "non_events": 6337,
+        "event_rate": 0.0935,
+        "woe": 0.2139
       },
       {
         "bin": "1",
-        "count": 1820,
-        "events": 377,
-        "non_events": 1443,
-        "event_rate": 0.2071,
-        "woe": -0.7163
+        "count": 1304,
+        "events": 280,
+        "non_events": 1024,
+        "event_rate": 0.2147,
+        "woe": -0.7611
       },
       {
         "bin": "2",
-        "count": 130,
-        "events": 21,
-        "non_events": 109,
-        "event_rate": 0.1615,
-        "woe": -0.4296
+        "count": 98,
+        "events": 17,
+        "non_events": 81,
+        "event_rate": 0.1735,
+        "woe": -0.5181
       },
       {
         "bin": "3",
-        "count": 10,
-        "events": 1,
-        "non_events": 9,
-        "event_rate": 0.1,
-        "woe": -0.2117
+        "count": 7,
+        "events": 0,
+        "non_events": 7,
+        "event_rate": 0.0,
+        "woe": 0.6516
       }
     ],
     "dpd_history_days": [
       {
         "bin": "(-0.001, 7.0]",
-        "count": 7170,
-        "events": 684,
-        "non_events": 6486,
-        "event_rate": 0.0954,
-        "woe": 0.1916
+        "count": 4969,
+        "events": 466,
+        "non_events": 4503,
+        "event_rate": 0.0938,
+        "woe": 0.2113
       },
       {
         "bin": "(14.0, 21.0]",
-        "count": 1413,
-        "events": 134,
-        "non_events": 1279,
-        "event_rate": 0.0948,
-        "woe": 0.1955
+        "count": 973,
+        "events": 84,
+        "non_events": 889,
+        "event_rate": 0.0863,
+        "woe": 0.2979
       },
       {
-        "bin": "(21.0, 87.0]",
-        "count": 766,
-        "events": 150,
-        "non_events": 616,
-        "event_rate": 0.1958,
-        "woe": -0.6471
+        "bin": "(21.0, 90.0]",
+        "count": 573,
+        "events": 114,
+        "non_events": 459,
+        "event_rate": 0.199,
+        "woe": -0.6665
       },
       {
         "bin": "(7.0, 14.0]",
-        "count": 1457,
-        "events": 141,
-        "non_events": 1316,
-        "event_rate": 0.0968,
-        "woe": 0.1732
+        "count": 1049,
+        "events": 104,
+        "non_events": 945,
+        "event_rate": 0.0991,
+        "woe": 0.1465
       },
       {
-        "bin": "(87.0, 179.0]",
-        "count": 1194,
-        "events": 249,
-        "non_events": 945,
-        "event_rate": 0.2085,
-        "woe": -0.7249
+        "bin": "(90.0, 179.0]",
+        "count": 836,
+        "events": 183,
+        "non_events": 653,
+        "event_rate": 0.2189,
+        "woe": -0.7859
       }
     ],
     "dti_ratio": [
       {
         "bin": "(0.048299999999999996, 0.178]",
-        "count": 1200,
-        "events": 95,
-        "non_events": 1105,
-        "event_rate": 0.0792,
-        "woe": 0.3933
+        "count": 841,
+        "events": 65,
+        "non_events": 776,
+        "event_rate": 0.0773,
+        "woe": 0.419
       },
       {
-        "bin": "(0.178, 0.263]",
-        "count": 1200,
-        "events": 70,
-        "non_events": 1130,
-        "event_rate": 0.0583,
-        "woe": 0.7192
+        "bin": "(0.178, 0.264]",
+        "count": 839,
+        "events": 49,
+        "non_events": 790,
+        "event_rate": 0.0584,
+        "woe": 0.7169
       },
       {
-        "bin": "(0.263, 0.338]",
-        "count": 1200,
-        "events": 90,
-        "non_events": 1110,
-        "event_rate": 0.075,
-        "woe": 0.4516
+        "bin": "(0.264, 0.339]",
+        "count": 841,
+        "events": 59,
+        "non_events": 782,
+        "event_rate": 0.0702,
+        "woe": 0.5228
       },
       {
-        "bin": "(0.338, 0.414]",
-        "count": 1200,
-        "events": 103,
-        "non_events": 1097,
-        "event_rate": 0.0858,
-        "woe": 0.3056
+        "bin": "(0.339, 0.417]",
+        "count": 839,
+        "events": 68,
+        "non_events": 771,
+        "event_rate": 0.081,
+        "woe": 0.3678
       },
       {
-        "bin": "(0.414, 0.499]",
-        "count": 1201,
-        "events": 144,
-        "non_events": 1057,
-        "event_rate": 0.1199,
-        "woe": -0.0652
+        "bin": "(0.417, 0.502]",
+        "count": 840,
+        "events": 98,
+        "non_events": 742,
+        "event_rate": 0.1167,
+        "woe": -0.0338
       },
       {
-        "bin": "(0.499, 0.598]",
-        "count": 1200,
-        "events": 169,
-        "non_events": 1031,
-        "event_rate": 0.1408,
-        "woe": -0.2497
+        "bin": "(0.502, 0.604]",
+        "count": 840,
+        "events": 125,
+        "non_events": 715,
+        "event_rate": 0.1488,
+        "woe": -0.3131
       },
       {
-        "bin": "(0.598, 0.722]",
-        "count": 1199,
-        "events": 166,
-        "non_events": 1033,
-        "event_rate": 0.1384,
-        "woe": -0.2299
+        "bin": "(0.604, 0.726]",
+        "count": 840,
+        "events": 115,
+        "non_events": 725,
+        "event_rate": 0.1369,
+        "woe": -0.2162
       },
       {
-        "bin": "(0.722, 0.902]",
-        "count": 1201,
-        "events": 174,
-        "non_events": 1027,
-        "event_rate": 0.1449,
-        "woe": -0.2826
+        "bin": "(0.726, 0.906]",
+        "count": 841,
+        "events": 136,
+        "non_events": 705,
+        "event_rate": 0.1617,
+        "woe": -0.4112
       },
       {
-        "bin": "(0.902, 1.254]",
-        "count": 1199,
-        "events": 170,
-        "non_events": 1029,
-        "event_rate": 0.1418,
-        "woe": -0.2575
+        "bin": "(0.906, 1.261]",
+        "count": 839,
+        "events": 109,
+        "non_events": 730,
+        "event_rate": 0.1299,
+        "woe": -0.1559
       },
       {
-        "bin": "(1.254, 2.849]",
-        "count": 1200,
-        "events": 177,
-        "non_events": 1023,
-        "event_rate": 0.1475,
-        "woe": -0.3036
+        "bin": "(1.261, 2.849]",
+        "count": 840,
+        "events": 127,
+        "non_events": 713,
+        "event_rate": 0.1512,
+        "woe": -0.3317
       }
     ],
     "loan_amount_usd": [
       {
-        "bin": "(1315.409, 9274.77]",
-        "count": 1200,
-        "events": 201,
-        "non_events": 999,
-        "event_rate": 0.1675,
-        "woe": -0.4541
+        "bin": "(1318.676, 9274.77]",
+        "count": 840,
+        "events": 146,
+        "non_events": 694,
+        "event_rate": 0.1738,
+        "woe": -0.4976
       },
       {
-        "bin": "(166.597, 244.546]",
-        "count": 1200,
-        "events": 102,
-        "non_events": 1098,
-        "event_rate": 0.085,
-        "woe": 0.3162
+        "bin": "(166.83, 245.554]",
+        "count": 840,
+        "events": 68,
+        "non_events": 772,
+        "event_rate": 0.081,
+        "woe": 0.3691
       },
       {
-        "bin": "(244.546, 319.404]",
-        "count": 1200,
-        "events": 120,
-        "non_events": 1080,
-        "event_rate": 0.1,
-        "woe": 0.1379
+        "bin": "(245.554, 320.327]",
+        "count": 840,
+        "events": 96,
+        "non_events": 744,
+        "event_rate": 0.1143,
+        "woe": -0.0106
       },
       {
-        "bin": "(319.404, 403.926]",
-        "count": 1200,
-        "events": 120,
-        "non_events": 1080,
-        "event_rate": 0.1,
-        "woe": 0.1379
+        "bin": "(320.327, 405.334]",
+        "count": 840,
+        "events": 92,
+        "non_events": 748,
+        "event_rate": 0.1095,
+        "woe": 0.0371
       },
       {
-        "bin": "(40.359, 166.597]",
-        "count": 1200,
+        "bin": "(40.899, 166.83]",
+        "count": 840,
+        "events": 69,
+        "non_events": 771,
+        "event_rate": 0.0821,
+        "woe": 0.3533
+      },
+      {
+        "bin": "(405.334, 505.505]",
+        "count": 840,
+        "events": 85,
+        "non_events": 755,
+        "event_rate": 0.1012,
+        "woe": 0.1251
+      },
+      {
+        "bin": "(505.505, 619.032]",
+        "count": 840,
+        "events": 88,
+        "non_events": 752,
+        "event_rate": 0.1048,
+        "woe": 0.0867
+      },
+      {
+        "bin": "(619.032, 765.099]",
+        "count": 840,
         "events": 110,
-        "non_events": 1090,
-        "event_rate": 0.0917,
-        "woe": 0.2338
+        "non_events": 730,
+        "event_rate": 0.131,
+        "woe": -0.165
       },
       {
-        "bin": "(403.926, 499.705]",
-        "count": 1200,
-        "events": 133,
-        "non_events": 1067,
-        "event_rate": 0.1108,
-        "woe": 0.0234
+        "bin": "(765.099, 970.75]",
+        "count": 840,
+        "events": 92,
+        "non_events": 748,
+        "event_rate": 0.1095,
+        "woe": 0.0371
       },
       {
-        "bin": "(499.705, 613.572]",
-        "count": 1200,
-        "events": 139,
-        "non_events": 1061,
-        "event_rate": 0.1158,
-        "woe": -0.0262
-      },
-      {
-        "bin": "(613.572, 761.53]",
-        "count": 1201,
-        "events": 153,
-        "non_events": 1048,
-        "event_rate": 0.1274,
-        "woe": -0.1342
-      },
-      {
-        "bin": "(761.53, 965.954]",
-        "count": 1199,
-        "events": 129,
-        "non_events": 1070,
-        "event_rate": 0.1076,
-        "woe": 0.0566
-      },
-      {
-        "bin": "(965.954, 1315.409]",
-        "count": 1200,
-        "events": 151,
-        "non_events": 1049,
-        "event_rate": 0.1258,
-        "woe": -0.1201
+        "bin": "(970.75, 1318.676]",
+        "count": 840,
+        "events": 105,
+        "non_events": 735,
+        "event_rate": 0.125,
+        "woe": -0.1119
       }
     ],
     "loan_term_months": [
       {
         "bin": "12",
-        "count": 3673,
-        "events": 378,
-        "non_events": 3295,
-        "event_rate": 0.1029,
-        "woe": 0.1072
+        "count": 2548,
+        "events": 264,
+        "non_events": 2284,
+        "event_rate": 0.1036,
+        "woe": 0.1005
       },
       {
         "bin": "18",
-        "count": 1349,
-        "events": 104,
-        "non_events": 1245,
-        "event_rate": 0.0771,
-        "woe": 0.4212
+        "count": 951,
+        "events": 73,
+        "non_events": 878,
+        "event_rate": 0.0768,
+        "woe": 0.4254
       },
       {
         "bin": "24",
-        "count": 987,
-        "events": 97,
-        "non_events": 890,
-        "event_rate": 0.0983,
-        "woe": 0.1551
+        "count": 682,
+        "events": 65,
+        "non_events": 617,
+        "event_rate": 0.0953,
+        "woe": 0.1881
       },
       {
         "bin": "3",
-        "count": 1186,
-        "events": 175,
-        "non_events": 1011,
-        "event_rate": 0.1476,
-        "woe": -0.3053
+        "count": 842,
+        "events": 134,
+        "non_events": 708,
+        "event_rate": 0.1591,
+        "woe": -0.394
       },
       {
         "bin": "6",
-        "count": 3007,
-        "events": 386,
-        "non_events": 2621,
-        "event_rate": 0.1284,
-        "woe": -0.1425
+        "count": 2095,
+        "events": 258,
+        "non_events": 1837,
+        "event_rate": 0.1232,
+        "woe": -0.0943
       },
       {
         "bin": "9",
-        "count": 1798,
-        "events": 218,
-        "non_events": 1580,
-        "event_rate": 0.1212,
-        "woe": -0.0782
-      }
-    ],
-    "group_lending": [
-      {
-        "bin": "0",
-        "count": 4693,
-        "events": 648,
-        "non_events": 4045,
-        "event_rate": 0.1381,
-        "woe": -0.2275
-      },
-      {
-        "bin": "1",
-        "count": 7307,
-        "events": 710,
-        "non_events": 6597,
-        "event_rate": 0.0972,
-        "woe": 0.1703
+        "count": 1282,
+        "events": 157,
+        "non_events": 1125,
+        "event_rate": 0.1225,
+        "woe": -0.089
       }
     ],
     "years_in_business": [
       {
         "bin": "(-0.001, 0.4]",
-        "count": 1250,
-        "events": 157,
-        "non_events": 1093,
-        "event_rate": 0.1256,
-        "woe": -0.1179
+        "count": 877,
+        "events": 116,
+        "non_events": 761,
+        "event_rate": 0.1323,
+        "woe": -0.1763
       },
       {
         "bin": "(0.4, 0.9]",
-        "count": 1332,
-        "events": 209,
-        "non_events": 1123,
-        "event_rate": 0.1569,
-        "woe": -0.3761
+        "count": 937,
+        "events": 148,
+        "non_events": 789,
+        "event_rate": 0.158,
+        "woe": -0.3829
       },
       {
         "bin": "(0.9, 1.4]",
-        "count": 1153,
-        "events": 121,
-        "non_events": 1032,
-        "event_rate": 0.1049,
-        "woe": 0.0842
+        "count": 776,
+        "events": 79,
+        "non_events": 697,
+        "event_rate": 0.1018,
+        "woe": 0.118
       },
       {
         "bin": "(1.4, 2.0]",
-        "count": 1167,
-        "events": 117,
-        "non_events": 1050,
-        "event_rate": 0.1003,
-        "woe": 0.135
+        "count": 811,
+        "events": 79,
+        "non_events": 732,
+        "event_rate": 0.0974,
+        "woe": 0.167
       },
       {
         "bin": "(2.0, 2.7]",
-        "count": 1169,
-        "events": 125,
-        "non_events": 1044,
-        "event_rate": 0.1069,
-        "woe": 0.0634
+        "count": 817,
+        "events": 81,
+        "non_events": 736,
+        "event_rate": 0.0991,
+        "woe": 0.1476
       },
       {
         "bin": "(2.7, 3.6]",
-        "count": 1194,
-        "events": 127,
-        "non_events": 1067,
-        "event_rate": 0.1064,
-        "woe": 0.0694
+        "count": 861,
+        "events": 92,
+        "non_events": 769,
+        "event_rate": 0.1069,
+        "woe": 0.0648
       },
       {
-        "bin": "(3.6, 4.7]",
-        "count": 1139,
-        "events": 143,
-        "non_events": 996,
-        "event_rate": 0.1255,
-        "woe": -0.1177
+        "bin": "(3.6, 4.8]",
+        "count": 826,
+        "events": 101,
+        "non_events": 725,
+        "event_rate": 0.1223,
+        "woe": -0.0869
       },
       {
-        "bin": "(4.7, 6.3]",
-        "count": 1228,
-        "events": 126,
-        "non_events": 1102,
-        "event_rate": 0.1026,
-        "woe": 0.1095
+        "bin": "(4.8, 6.4]",
+        "count": 849,
+        "events": 96,
+        "non_events": 753,
+        "event_rate": 0.1131,
+        "woe": 0.0014
       },
       {
-        "bin": "(6.3, 9.0]",
-        "count": 1172,
-        "events": 113,
-        "non_events": 1059,
-        "event_rate": 0.0964,
-        "woe": 0.1782
+        "bin": "(6.4, 9.1]",
+        "count": 823,
+        "events": 83,
+        "non_events": 740,
+        "event_rate": 0.1009,
+        "woe": 0.1287
       },
       {
-        "bin": "(9.0, 30.0]",
-        "count": 1196,
-        "events": 120,
-        "non_events": 1076,
-        "event_rate": 0.1003,
-        "woe": 0.1342
+        "bin": "(9.1, 30.0]",
+        "count": 823,
+        "events": 76,
+        "non_events": 747,
+        "event_rate": 0.0923,
+        "woe": 0.2257
+      }
+    ],
+    "group_lending": [
+      {
+        "bin": "0",
+        "count": 3303,
+        "events": 452,
+        "non_events": 2851,
+        "event_rate": 0.1368,
+        "woe": -0.2166
+      },
+      {
+        "bin": "1",
+        "count": 5097,
+        "events": 499,
+        "non_events": 4598,
+        "event_rate": 0.0979,
+        "woe": 0.1625
       }
     ],
     "has_collateral": [
       {
         "bin": "0",
-        "count": 7799,
-        "events": 968,
-        "non_events": 6831,
-        "event_rate": 0.1241,
-        "woe": -0.1046
+        "count": 5437,
+        "events": 674,
+        "non_events": 4763,
+        "event_rate": 0.124,
+        "woe": -0.1026
       },
       {
         "bin": "1",
-        "count": 4201,
-        "events": 390,
-        "non_events": 3811,
-        "event_rate": 0.0928,
-        "woe": 0.2202
+        "count": 2963,
+        "events": 277,
+        "non_events": 2686,
+        "event_rate": 0.0935,
+        "woe": 0.2128
       }
     ]
   },
@@ -589,132 +589,137 @@
     "pdo": 20,
     "factor": 28.8539,
     "offset": 487.1229,
-    "intercept": -2.073981,
+    "intercept": -1.958634,
     "features": [
       {
         "feature": "previous_defaults",
-        "coefficient": -0.579136
+        "coefficient": -0.901909
       },
       {
         "feature": "dpd_history_days",
-        "coefficient": -0.55071
+        "coefficient": -0.505198
       },
       {
         "feature": "dti_ratio",
-        "coefficient": -0.893599
+        "coefficient": -0.662175
       },
       {
         "feature": "loan_amount_usd",
-        "coefficient": -0.565277
+        "coefficient": 0.0
       },
       {
         "feature": "loan_term_months",
-        "coefficient": -0.346833
-      },
-      {
-        "feature": "group_lending",
-        "coefficient": -0.983164
+        "coefficient": -0.913329
       },
       {
         "feature": "years_in_business",
-        "coefficient": -1.015373
+        "coefficient": -1.019722
+      },
+      {
+        "feature": "group_lending",
+        "coefficient": -0.976478
       },
       {
         "feature": "has_collateral",
-        "coefficient": -0.89119
+        "coefficient": -0.974176
+      },
+      {
+        "feature": "interest_rate_pct",
+        "coefficient": -0.461926
       }
     ]
   },
   "validation": {
-    "train_gini": 0.3521,
-    "test_gini": 0.2944,
+    "train_gini": 0.3082,
+    "test_gini": 0.2479,
     "train_ks": {
-      "ks": 0.2673,
-      "threshold": 0.1091,
-      "fpr_at_ks": 0.3868,
-      "tpr_at_ks": 0.654
+      "ks": 0.2302,
+      "threshold": 0.1139,
+      "fpr_at_ks": 0.3387,
+      "tpr_at_ks": 0.5689
     },
     "test_ks": {
-      "ks": 0.2304,
-      "threshold": 0.1104,
-      "fpr_at_ks": 0.3617,
-      "tpr_at_ks": 0.5921
+      "ks": 0.2055,
+      "threshold": 0.1168,
+      "fpr_at_ks": 0.3007,
+      "tpr_at_ks": 0.5061
     },
     "psi": {
-      "psi": 0.0081,
+      "psi": 0.0079,
       "interpretation": "Stable",
       "bins": [
         {
           "bin_low": null,
-          "bin_high": 498.16,
-          "expected_pct": 0.0028,
-          "actual_pct": 0.0009,
-          "psi_component": 0.002118
+          "bin_high": 502.7,
+          "expected_pct": 0.0026,
+          "actual_pct": 0.0018,
+          "psi_component": 0.000322
         },
         {
-          "bin_low": 498.16,
-          "bin_high": 509.12,
-          "expected_pct": 0.0145,
-          "actual_pct": 0.0129,
-          "psi_component": 0.000194
+          "bin_low": 502.7,
+          "bin_high": 512.2,
+          "expected_pct": 0.0111,
+          "actual_pct": 0.0087,
+          "psi_component": 0.000557
         },
         {
-          "bin_low": 509.12,
-          "bin_high": 520.08,
-          "expected_pct": 0.0419,
-          "actual_pct": 0.034,
-          "psi_component": 0.00165
+          "bin_low": 512.2,
+          "bin_high": 521.7,
+          "expected_pct": 0.0426,
+          "actual_pct": 0.0345,
+          "psi_component": 0.001689
         },
         {
-          "bin_low": 520.08,
-          "bin_high": 531.04,
-          "expected_pct": 0.0736,
-          "actual_pct": 0.0707,
-          "psi_component": 0.000116
+          "bin_low": 521.7,
+          "bin_high": 531.21,
+          "expected_pct": 0.073,
+          "actual_pct": 0.0632,
+          "psi_component": 0.001414
         },
         {
-          "bin_low": 531.04,
-          "bin_high": 542.01,
-          "expected_pct": 0.1638,
-          "actual_pct": 0.1598,
-          "psi_component": 9.7e-05
+          "bin_low": 531.21,
+          "bin_high": 540.71,
+          "expected_pct": 0.0991,
+          "actual_pct": 0.1051,
+          "psi_component": 0.000347
         },
         {
-          "bin_low": 542.01,
-          "bin_high": 552.97,
-          "expected_pct": 0.2476,
-          "actual_pct": 0.2595,
-          "psi_component": 0.000563
+          "bin_low": 540.71,
+          "bin_high": 550.22,
+          "expected_pct": 0.2205,
+          "actual_pct": 0.2257,
+          "psi_component": 0.000121
         },
         {
-          "bin_low": 552.97,
-          "bin_high": 563.93,
-          "expected_pct": 0.2147,
-          "actual_pct": 0.2051,
-          "psi_component": 0.000443
+          "bin_low": 550.22,
+          "bin_high": 559.72,
+          "expected_pct": 0.2977,
+          "actual_pct": 0.3059,
+          "psi_component": 0.000224
         },
         {
-          "bin_low": 563.93,
-          "bin_high": 574.89,
-          "expected_pct": 0.1445,
-          "actual_pct": 0.1601,
-          "psi_component": 0.001598
+          "bin_low": 559.72,
+          "bin_high": 569.22,
+          "expected_pct": 0.1889,
+          "actual_pct": 0.1959,
+          "psi_component": 0.000256
         },
         {
-          "bin_low": 574.89,
-          "bin_high": 585.86,
-          "expected_pct": 0.0832,
-          "actual_pct": 0.0873,
-          "psi_component": 0.0002
+          "bin_low": 569.22,
+          "bin_high": 578.73,
+          "expected_pct": 0.0551,
+          "actual_pct": 0.0545,
+          "psi_component": 6e-06
         },
         {
-          "bin_low": 585.86,
+          "bin_low": 578.73,
           "bin_high": null,
-          "expected_pct": 0.0144,
-          "actual_pct": 0.0107,
-          "psi_component": 0.00112
+          "expected_pct": 0.0105,
+          "actual_pct": 0.0057,
+          "psi_component": 0.002951
         }
-      ]
+      ],
+      "scope": "same-period random split, not temporal drift"
     },
     "roc_curve": [
       {
@@ -722,396 +727,392 @@
         "tpr": 0.0
       },
       {
-        "fpr": 0.0113,
-        "tpr": 0.0344
+        "fpr": 0.0116,
+        "tpr": 0.0246
       },
       {
-        "fpr": 0.0191,
-        "tpr": 0.0713
+        "fpr": 0.0229,
+        "tpr": 0.059
       },
       {
-        "fpr": 0.0288,
-        "tpr": 0.1007
+        "fpr": 0.0354,
+        "tpr": 0.086
       },
       {
-        "fpr": 0.046,
-        "tpr": 0.1302
+        "fpr": 0.0489,
+        "tpr": 0.1204
       },
       {
-        "fpr": 0.0614,
-        "tpr": 0.1622
+        "fpr": 0.0595,
+        "tpr": 0.1278
       },
       {
-        "fpr": 0.083,
-        "tpr": 0.1867
+        "fpr": 0.072,
+        "tpr": 0.1646
       },
       {
-        "fpr": 0.0965,
-        "tpr": 0.2138
+        "fpr": 0.0886,
+        "tpr": 0.1941
       },
       {
-        "fpr": 0.1096,
-        "tpr": 0.2408
+        "fpr": 0.1005,
+        "tpr": 0.226
       },
       {
-        "fpr": 0.1221,
-        "tpr": 0.2678
+        "fpr": 0.1184,
+        "tpr": 0.2531
       },
       {
-        "fpr": 0.1372,
-        "tpr": 0.2875
+        "fpr": 0.1347,
+        "tpr": 0.2752
       },
       {
-        "fpr": 0.1613,
-        "tpr": 0.3022
+        "fpr": 0.1528,
+        "tpr": 0.2948
       },
       {
-        "fpr": 0.1738,
-        "tpr": 0.3219
+        "fpr": 0.1701,
+        "tpr": 0.3145
       },
       {
-        "fpr": 0.1854,
-        "tpr": 0.344
+        "fpr": 0.1826,
+        "tpr": 0.3464
       },
       {
-        "fpr": 0.2011,
-        "tpr": 0.3686
+        "fpr": 0.212,
+        "tpr": 0.3882
       },
       {
-        "fpr": 0.2174,
-        "tpr": 0.3907
+        "fpr": 0.2249,
+        "tpr": 0.4128
       },
       {
-        "fpr": 0.2339,
-        "tpr": 0.4152
+        "fpr": 0.2471,
+        "tpr": 0.4398
       },
       {
-        "fpr": 0.2534,
-        "tpr": 0.4324
+        "fpr": 0.2706,
+        "tpr": 0.4693
       },
       {
-        "fpr": 0.2671,
-        "tpr": 0.457
+        "fpr": 0.2878,
+        "tpr": 0.4816
       },
       {
-        "fpr": 0.2859,
-        "tpr": 0.4791
+        "fpr": 0.3079,
+        "tpr": 0.5086
       },
       {
-        "fpr": 0.3057,
-        "tpr": 0.4988
+        "fpr": 0.337,
+        "tpr": 0.5307
       },
       {
-        "fpr": 0.321,
-        "tpr": 0.516
+        "fpr": 0.3542,
+        "tpr": 0.5479
       },
       {
-        "fpr": 0.331,
-        "tpr": 0.543
-      },
-      {
-        "fpr": 0.3454,
+        "fpr": 0.3768,
         "tpr": 0.5676
       },
       {
-        "fpr": 0.3617,
-        "tpr": 0.5921
+        "fpr": 0.3956,
+        "tpr": 0.5774
       },
       {
-        "fpr": 0.3837,
+        "fpr": 0.4162,
         "tpr": 0.6044
       },
       {
-        "fpr": 0.4109,
-        "tpr": 0.6167
+        "fpr": 0.4319,
+        "tpr": 0.6241
       },
       {
-        "fpr": 0.4297,
-        "tpr": 0.629
+        "fpr": 0.4792,
+        "tpr": 0.6585
       },
       {
-        "fpr": 0.4444,
-        "tpr": 0.6462
+        "fpr": 0.4973,
+        "tpr": 0.6757
       },
       {
-        "fpr": 0.4588,
-        "tpr": 0.6683
+        "fpr": 0.5205,
+        "tpr": 0.6806
       },
       {
-        "fpr": 0.4795,
+        "fpr": 0.5443,
         "tpr": 0.6904
       },
       {
-        "fpr": 0.5017,
-        "tpr": 0.7076
+        "fpr": 0.565,
+        "tpr": 0.7052
       },
       {
-        "fpr": 0.5252,
-        "tpr": 0.7248
+        "fpr": 0.5941,
+        "tpr": 0.7273
       },
       {
-        "fpr": 0.5427,
-        "tpr": 0.742
+        "fpr": 0.611,
+        "tpr": 0.7445
       },
       {
-        "fpr": 0.5653,
-        "tpr": 0.7568
+        "fpr": 0.6279,
+        "tpr": 0.7543
       },
       {
-        "fpr": 0.5891,
-        "tpr": 0.774
+        "fpr": 0.6633,
+        "tpr": 0.7862
       },
       {
-        "fpr": 0.6104,
+        "fpr": 0.6799,
         "tpr": 0.7985
       },
       {
-        "fpr": 0.6333,
-        "tpr": 0.8182
+        "fpr": 0.6981,
+        "tpr": 0.8059
       },
       {
-        "fpr": 0.6605,
-        "tpr": 0.8329
+        "fpr": 0.7175,
+        "tpr": 0.8133
       },
       {
-        "fpr": 0.6865,
-        "tpr": 0.8477
+        "fpr": 0.7341,
+        "tpr": 0.8231
       },
       {
-        "fpr": 0.7109,
-        "tpr": 0.8649
+        "fpr": 0.7485,
+        "tpr": 0.8403
       },
       {
-        "fpr": 0.7303,
+        "fpr": 0.7811,
         "tpr": 0.8747
       },
       {
-        "fpr": 0.7448,
-        "tpr": 0.8845
+        "fpr": 0.8039,
+        "tpr": 0.8894
       },
       {
-        "fpr": 0.7729,
-        "tpr": 0.8993
+        "fpr": 0.8193,
+        "tpr": 0.9091
       },
       {
-        "fpr": 0.7952,
-        "tpr": 0.9115
+        "fpr": 0.8331,
+        "tpr": 0.9165
       },
       {
-        "fpr": 0.8158,
-        "tpr": 0.9287
+        "fpr": 0.849,
+        "tpr": 0.9214
       },
       {
-        "fpr": 0.8434,
-        "tpr": 0.9435
+        "fpr": 0.8801,
+        "tpr": 0.941
       },
       {
-        "fpr": 0.8666,
-        "tpr": 0.9533
+        "fpr": 0.9013,
+        "tpr": 0.9484
       },
       {
-        "fpr": 0.891,
-        "tpr": 0.9705
+        "fpr": 0.9201,
+        "tpr": 0.9558
       },
       {
-        "fpr": 0.9139,
-        "tpr": 0.9828
+        "fpr": 0.9383,
+        "tpr": 0.9607
       },
       {
-        "fpr": 0.9424,
-        "tpr": 0.9926
+        "fpr": 0.9593,
+        "tpr": 0.9754
       },
       {
-        "fpr": 0.9668,
-        "tpr": 0.9926
+        "fpr": 0.9768,
+        "tpr": 0.9853
       },
       {
-        "fpr": 0.9872,
-        "tpr": 0.9975
+        "fpr": 0.9937,
+        "tpr": 0.9902
       }
     ],
     "ks_curve": [
       {
-        "probability": 0.0228,
+        "probability": 0.0324,
         "cum_bad_pct": 0.0,
         "cum_good_pct": 0.0003,
         "ks_gap": 0.0003
       },
       {
-        "probability": 0.0393,
-        "cum_bad_pct": 0.0074,
-        "cum_good_pct": 0.0557,
-        "ks_gap": 0.0484
+        "probability": 0.0534,
+        "cum_bad_pct": 0.0344,
+        "cum_good_pct": 0.0523,
+        "ks_gap": 0.0179
       },
       {
-        "probability": 0.046,
-        "cum_bad_pct": 0.0295,
-        "cum_good_pct": 0.1093,
-        "ks_gap": 0.0798
+        "probability": 0.0597,
+        "cum_bad_pct": 0.0565,
+        "cum_good_pct": 0.1059,
+        "ks_gap": 0.0493
       },
       {
-        "probability": 0.0518,
-        "cum_bad_pct": 0.0614,
-        "cum_good_pct": 0.1616,
-        "ks_gap": 0.1002
+        "probability": 0.0646,
+        "cum_bad_pct": 0.0786,
+        "cum_good_pct": 0.1594,
+        "ks_gap": 0.0808
       },
       {
-        "probability": 0.0581,
-        "cum_bad_pct": 0.0934,
-        "cum_good_pct": 0.2139,
-        "ks_gap": 0.1205
+        "probability": 0.0705,
+        "cum_bad_pct": 0.1229,
+        "cum_good_pct": 0.2101,
+        "ks_gap": 0.0873
       },
       {
-        "probability": 0.0645,
-        "cum_bad_pct": 0.1253,
-        "cum_good_pct": 0.2662,
-        "ks_gap": 0.1409
+        "probability": 0.074,
+        "cum_bad_pct": 0.1671,
+        "cum_good_pct": 0.2609,
+        "ks_gap": 0.0938
       },
       {
-        "probability": 0.0715,
-        "cum_bad_pct": 0.1572,
-        "cum_good_pct": 0.3185,
-        "ks_gap": 0.1613
+        "probability": 0.0793,
+        "cum_bad_pct": 0.1966,
+        "cum_good_pct": 0.3135,
+        "ks_gap": 0.1169
       },
       {
-        "probability": 0.0775,
-        "cum_bad_pct": 0.1818,
-        "cum_good_pct": 0.3718,
-        "ks_gap": 0.1899
+        "probability": 0.0827,
+        "cum_bad_pct": 0.2359,
+        "cum_good_pct": 0.3649,
+        "ks_gap": 0.129
       },
       {
-        "probability": 0.0842,
-        "cum_bad_pct": 0.2334,
-        "cum_good_pct": 0.4215,
-        "ks_gap": 0.1881
+        "probability": 0.0868,
+        "cum_bad_pct": 0.2776,
+        "cum_good_pct": 0.4159,
+        "ks_gap": 0.1383
       },
       {
         "probability": 0.0909,
-        "cum_bad_pct": 0.2727,
-        "cum_good_pct": 0.4729,
-        "ks_gap": 0.2002
+        "cum_bad_pct": 0.312,
+        "cum_good_pct": 0.4679,
+        "ks_gap": 0.1559
       },
       {
-        "probability": 0.0971,
-        "cum_bad_pct": 0.3194,
-        "cum_good_pct": 0.5233,
-        "ks_gap": 0.2039
+        "probability": 0.0966,
+        "cum_bad_pct": 0.3415,
+        "cum_good_pct": 0.5205,
+        "ks_gap": 0.179
       },
       {
-        "probability": 0.1025,
-        "cum_bad_pct": 0.3735,
-        "cum_good_pct": 0.5728,
-        "ks_gap": 0.1994
+        "probability": 0.0996,
+        "cum_bad_pct": 0.3808,
+        "cum_good_pct": 0.5719,
+        "ks_gap": 0.191
       },
       {
-        "probability": 0.1088,
-        "cum_bad_pct": 0.4005,
-        "cum_good_pct": 0.6257,
-        "ks_gap": 0.2253
+        "probability": 0.1065,
+        "cum_bad_pct": 0.4324,
+        "cum_good_pct": 0.6217,
+        "ks_gap": 0.1892
       },
       {
-        "probability": 0.1167,
-        "cum_bad_pct": 0.4693,
-        "cum_good_pct": 0.6733,
-        "ks_gap": 0.2041
+        "probability": 0.1141,
+        "cum_bad_pct": 0.4767,
+        "cum_good_pct": 0.6724,
+        "ks_gap": 0.1957
       },
       {
-        "probability": 0.1256,
-        "cum_bad_pct": 0.5258,
-        "cum_good_pct": 0.7225,
-        "ks_gap": 0.1967
+        "probability": 0.1199,
+        "cum_bad_pct": 0.5233,
+        "cum_good_pct": 0.7228,
+        "ks_gap": 0.1995
       },
       {
-        "probability": 0.1356,
-        "cum_bad_pct": 0.5971,
-        "cum_good_pct": 0.7698,
-        "ks_gap": 0.1728
+        "probability": 0.1292,
+        "cum_bad_pct": 0.5848,
+        "cum_good_pct": 0.7714,
+        "ks_gap": 0.1866
       },
       {
-        "probability": 0.1474,
-        "cum_bad_pct": 0.6658,
-        "cum_good_pct": 0.8174,
-        "ks_gap": 0.1516
+        "probability": 0.1385,
+        "cum_bad_pct": 0.656,
+        "cum_good_pct": 0.8187,
+        "ks_gap": 0.1626
       },
       {
-        "probability": 0.1655,
-        "cum_bad_pct": 0.715,
-        "cum_good_pct": 0.8675,
-        "ks_gap": 0.1525
+        "probability": 0.158,
+        "cum_bad_pct": 0.7248,
+        "cum_good_pct": 0.8663,
+        "ks_gap": 0.1415
       },
       {
-        "probability": 0.1913,
-        "cum_bad_pct": 0.8108,
-        "cum_good_pct": 0.9117,
-        "ks_gap": 0.1009
+        "probability": 0.1841,
+        "cum_bad_pct": 0.8084,
+        "cum_good_pct": 0.912,
+        "ks_gap": 0.1036
       },
       {
-        "probability": 0.2391,
-        "cum_bad_pct": 0.8796,
-        "cum_good_pct": 0.9593,
-        "ks_gap": 0.0797
+        "probability": 0.2236,
+        "cum_bad_pct": 0.8968,
+        "cum_good_pct": 0.9571,
+        "ks_gap": 0.0603
       }
     ],
     "score_distribution": [
       {
-        "band": "(494.126, 504.359]",
-        "count": 16,
+        "band": "(493.101, 502.388]",
+        "count": 6,
         "defaults": 2,
-        "default_rate": 0.125
+        "default_rate": 0.3333333333333333
       },
       {
-        "band": "(504.359, 514.492]",
-        "count": 86,
-        "defaults": 33,
-        "default_rate": 0.38372093023255816
+        "band": "(502.388, 511.583]",
+        "count": 26,
+        "defaults": 5,
+        "default_rate": 0.19230769230769232
       },
       {
-        "band": "(514.492, 524.625]",
-        "count": 158,
-        "defaults": 31,
-        "default_rate": 0.1962025316455696
+        "band": "(511.583, 520.779]",
+        "count": 113,
+        "defaults": 28,
+        "default_rate": 0.24778761061946902
       },
       {
-        "band": "(524.625, 534.757]",
-        "count": 316,
-        "defaults": 54,
-        "default_rate": 0.17088607594936708
+        "band": "(520.779, 529.974]",
+        "count": 212,
+        "defaults": 43,
+        "default_rate": 0.2028301886792453
       },
       {
-        "band": "(534.757, 544.89]",
-        "count": 637,
-        "defaults": 87,
-        "default_rate": 0.13657770800627944
+        "band": "(529.974, 539.169]",
+        "count": 331,
+        "defaults": 57,
+        "default_rate": 0.17220543806646527
       },
       {
-        "band": "(544.89, 555.022]",
-        "count": 894,
-        "defaults": 101,
-        "default_rate": 0.11297539149888143
+        "band": "(539.169, 548.364]",
+        "count": 738,
+        "defaults": 96,
+        "default_rate": 0.13008130081300814
       },
       {
-        "band": "(555.022, 565.155]",
-        "count": 641,
-        "defaults": 54,
-        "default_rate": 0.0842433697347894
+        "band": "(548.364, 557.559]",
+        "count": 1047,
+        "defaults": 94,
+        "default_rate": 0.08978032473734479
       },
       {
-        "band": "(565.155, 575.287]",
-        "count": 510,
-        "defaults": 36,
-        "default_rate": 0.07058823529411765
+        "band": "(557.559, 566.754]",
+        "count": 787,
+        "defaults": 61,
+        "default_rate": 0.07750952986022872
       },
       {
-        "band": "(575.287, 585.42]",
-        "count": 297,
-        "defaults": 8,
-        "default_rate": 0.026936026936026935
+        "band": "(566.754, 575.95]",
+        "count": 283,
+        "defaults": 15,
+        "default_rate": 0.053003533568904596
       },
       {
-        "band": "(585.42, 595.553]",
-        "count": 45,
-        "defaults": 1,
-        "default_rate": 0.022222222222222223
+        "band": "(575.95, 585.145]",
+        "count": 57,
+        "defaults": 6,
+        "default_rate": 0.10526315789473684
       }
     ]
   },
@@ -1156,150 +1157,150 @@
   "stress_by_band": {
     "Baseline": [
       {
-        "band": "(494.226, 537.777]",
-        "count": 720,
-        "base_defaults": 136,
-        "base_default_rate": 0.1889,
-        "stressed_default_rate": 0.1889
-      },
-      {
-        "band": "(537.777, 547.822]",
-        "count": 720,
-        "base_defaults": 108,
-        "base_default_rate": 0.15,
-        "stressed_default_rate": 0.15
-      },
-      {
-        "band": "(547.822, 555.985]",
-        "count": 720,
-        "base_defaults": 68,
-        "base_default_rate": 0.0944,
-        "stressed_default_rate": 0.0944
-      },
-      {
-        "band": "(555.985, 567.514]",
+        "band": "(493.192, 539.866]",
         "count": 721,
-        "base_defaults": 57,
-        "base_default_rate": 0.0791,
-        "stressed_default_rate": 0.0791
+        "base_defaults": 141,
+        "base_default_rate": 0.1956,
+        "stressed_default_rate": 0.1956
       },
       {
-        "band": "(567.514, 595.553]",
-        "count": 719,
-        "base_defaults": 38,
-        "base_default_rate": 0.0529,
-        "stressed_default_rate": 0.0529
+        "band": "(539.866, 548.506]",
+        "count": 725,
+        "base_defaults": 90,
+        "base_default_rate": 0.1241,
+        "stressed_default_rate": 0.1241
+      },
+      {
+        "band": "(548.506, 555.057]",
+        "count": 714,
+        "base_defaults": 63,
+        "base_default_rate": 0.0882,
+        "stressed_default_rate": 0.0882
+      },
+      {
+        "band": "(555.057, 561.537]",
+        "count": 733,
+        "base_defaults": 64,
+        "base_default_rate": 0.0873,
+        "stressed_default_rate": 0.0873
+      },
+      {
+        "band": "(561.537, 585.145]",
+        "count": 707,
+        "base_defaults": 49,
+        "base_default_rate": 0.0693,
+        "stressed_default_rate": 0.0693
       }
     ],
     "Mild Stress": [
       {
-        "band": "(494.226, 537.777]",
-        "count": 720,
-        "base_defaults": 136,
-        "base_default_rate": 0.1889,
-        "stressed_default_rate": 0.2456
-      },
-      {
-        "band": "(537.777, 547.822]",
-        "count": 720,
-        "base_defaults": 108,
-        "base_default_rate": 0.15,
-        "stressed_default_rate": 0.195
-      },
-      {
-        "band": "(547.822, 555.985]",
-        "count": 720,
-        "base_defaults": 68,
-        "base_default_rate": 0.0944,
-        "stressed_default_rate": 0.1228
-      },
-      {
-        "band": "(555.985, 567.514]",
+        "band": "(493.192, 539.866]",
         "count": 721,
-        "base_defaults": 57,
-        "base_default_rate": 0.0791,
-        "stressed_default_rate": 0.1028
+        "base_defaults": 141,
+        "base_default_rate": 0.1956,
+        "stressed_default_rate": 0.2542
       },
       {
-        "band": "(567.514, 595.553]",
-        "count": 719,
-        "base_defaults": 38,
-        "base_default_rate": 0.0529,
-        "stressed_default_rate": 0.0687
+        "band": "(539.866, 548.506]",
+        "count": 725,
+        "base_defaults": 90,
+        "base_default_rate": 0.1241,
+        "stressed_default_rate": 0.1614
+      },
+      {
+        "band": "(548.506, 555.057]",
+        "count": 714,
+        "base_defaults": 63,
+        "base_default_rate": 0.0882,
+        "stressed_default_rate": 0.1147
+      },
+      {
+        "band": "(555.057, 561.537]",
+        "count": 733,
+        "base_defaults": 64,
+        "base_default_rate": 0.0873,
+        "stressed_default_rate": 0.1135
+      },
+      {
+        "band": "(561.537, 585.145]",
+        "count": 707,
+        "base_defaults": 49,
+        "base_default_rate": 0.0693,
+        "stressed_default_rate": 0.0901
       }
     ],
     "Severe Stress": [
       {
-        "band": "(494.226, 537.777]",
-        "count": 720,
-        "base_defaults": 136,
-        "base_default_rate": 0.1889,
-        "stressed_default_rate": 0.34
-      },
-      {
-        "band": "(537.777, 547.822]",
-        "count": 720,
-        "base_defaults": 108,
-        "base_default_rate": 0.15,
-        "stressed_default_rate": 0.27
-      },
-      {
-        "band": "(547.822, 555.985]",
-        "count": 720,
-        "base_defaults": 68,
-        "base_default_rate": 0.0944,
-        "stressed_default_rate": 0.17
-      },
-      {
-        "band": "(555.985, 567.514]",
+        "band": "(493.192, 539.866]",
         "count": 721,
-        "base_defaults": 57,
-        "base_default_rate": 0.0791,
-        "stressed_default_rate": 0.1423
+        "base_defaults": 141,
+        "base_default_rate": 0.1956,
+        "stressed_default_rate": 0.352
       },
       {
-        "band": "(567.514, 595.553]",
-        "count": 719,
-        "base_defaults": 38,
-        "base_default_rate": 0.0529,
-        "stressed_default_rate": 0.0951
+        "band": "(539.866, 548.506]",
+        "count": 725,
+        "base_defaults": 90,
+        "base_default_rate": 0.1241,
+        "stressed_default_rate": 0.2234
+      },
+      {
+        "band": "(548.506, 555.057]",
+        "count": 714,
+        "base_defaults": 63,
+        "base_default_rate": 0.0882,
+        "stressed_default_rate": 0.1588
+      },
+      {
+        "band": "(555.057, 561.537]",
+        "count": 733,
+        "base_defaults": 64,
+        "base_default_rate": 0.0873,
+        "stressed_default_rate": 0.1572
+      },
+      {
+        "band": "(561.537, 585.145]",
+        "count": 707,
+        "base_defaults": 49,
+        "base_default_rate": 0.0693,
+        "stressed_default_rate": 0.1248
       }
     ],
     "Extreme": [
       {
-        "band": "(494.226, 537.777]",
-        "count": 720,
-        "base_defaults": 136,
-        "base_default_rate": 0.1889,
-        "stressed_default_rate": 0.4722
-      },
-      {
-        "band": "(537.777, 547.822]",
-        "count": 720,
-        "base_defaults": 108,
-        "base_default_rate": 0.15,
-        "stressed_default_rate": 0.375
-      },
-      {
-        "band": "(547.822, 555.985]",
-        "count": 720,
-        "base_defaults": 68,
-        "base_default_rate": 0.0944,
-        "stressed_default_rate": 0.2361
-      },
-      {
-        "band": "(555.985, 567.514]",
+        "band": "(493.192, 539.866]",
         "count": 721,
-        "base_defaults": 57,
-        "base_default_rate": 0.0791,
-        "stressed_default_rate": 0.1976
+        "base_defaults": 141,
+        "base_default_rate": 0.1956,
+        "stressed_default_rate": 0.4889
       },
       {
-        "band": "(567.514, 595.553]",
-        "count": 719,
-        "base_defaults": 38,
-        "base_default_rate": 0.0529,
-        "stressed_default_rate": 0.1321
+        "band": "(539.866, 548.506]",
+        "count": 725,
+        "base_defaults": 90,
+        "base_default_rate": 0.1241,
+        "stressed_default_rate": 0.3103
+      },
+      {
+        "band": "(548.506, 555.057]",
+        "count": 714,
+        "base_defaults": 63,
+        "base_default_rate": 0.0882,
+        "stressed_default_rate": 0.2206
+      },
+      {
+        "band": "(555.057, 561.537]",
+        "count": 733,
+        "base_defaults": 64,
+        "base_default_rate": 0.0873,
+        "stressed_default_rate": 0.2183
+      },
+      {
+        "band": "(561.537, 585.145]",
+        "count": 707,
+        "base_defaults": 49,
+        "base_default_rate": 0.0693,
+        "stressed_default_rate": 0.1733
       }
     ]
   }

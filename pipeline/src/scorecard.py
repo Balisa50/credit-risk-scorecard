@@ -29,6 +29,8 @@ def build_scorecard(
     target: str = "default",
     test_size: float = 0.3,
     random_state: int = 42,
+    train_idx=None,
+    test_idx=None,
 ) -> dict:
     """
     Train logistic regression on WoE-transformed features and convert
@@ -39,9 +41,16 @@ def build_scorecard(
     X = df[woe_features]
     y = df[target]
 
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=test_size, random_state=random_state, stratify=y
-    )
+    if train_idx is not None and test_idx is not None:
+        # Split decided by the caller, before the WoE transform, so the bins
+        # were learned without ever seeing these test labels. Splitting again
+        # here would reshuffle and undo that.
+        X_train, X_test = X.loc[train_idx], X.loc[test_idx]
+        y_train, y_test = y.loc[train_idx], y.loc[test_idx]
+    else:
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=test_size, random_state=random_state, stratify=y
+        )
 
     model = LogisticRegression(
         penalty="l2",
