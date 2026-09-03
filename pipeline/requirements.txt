@@ -1,7 +1,4 @@
+# Only what pipeline/run_pipeline.py and pipeline/src/ actually import.
 pandas>=2.0
 numpy>=1.24
 scikit-learn>=1.3
-scipy>=1.11
-plotly>=5.18
-streamlit>=1.30
-openpyxl>=3.1

@@ -4,6 +4,24 @@ Basel II-compliant credit scorecard for West African microfinance. Logistic regr
 
 Why build this: most credit risk tooling assumes the data and risk distribution of mature Western markets. West African microfinance has different risk drivers - mobile money usage, agricultural income seasonality, informal employment - so the feature importance looks different.
 
+## How it works
+
+```mermaid
+flowchart LR
+    A["generate_data.py<br/>12,000 synthetic loans"] --> B["Clean<br/>cap at 1st/99th pct"]
+    B --> C["woe_iv.py<br/>bin, compute IV<br/>drop IV &lt; 0.02"]
+    C --> D["Logistic regression<br/>on WoE features"]
+    D --> E["scorecard.py<br/>coefficients to points<br/>PDO 20, base 600"]
+    E --> F["validation.py<br/>Gini, KS, AUC, PSI"]
+    E --> G["stress_test.py<br/>+50% and +100% PD<br/>re-score the book"]
+    F --> H["public/data/<br/>pipeline_results.json"]
+    G --> H
+    H --> I["Next.js dashboard<br/>reads the JSON, computes nothing"]
+```
+
+The dashboard is a renderer. Every number it shows was written by the Python
+run, so the page and the model can never disagree.
+
 ## Pipeline
 
 1. **Data cleaning** - handle informal income fields, missing collateral data, outlier capping at 1st/99th percentile
@@ -14,40 +32,92 @@ Why build this: most credit risk tooling assumes the data and risk distribution 
 
 ## Stack
 
-- Python - pandas, scikit-learn, scipy, matplotlib
+- Python - pandas, NumPy, scikit-learn
 - Next.js + Recharts - scorecard UI and stress test visualiser
 
-## Running
+## Prerequisites
+
+- Python 3.10 or newer
+- Node.js 18 or newer
+
+## Installation
 
 ```bash
-pip install -r requirements.txt
-jupyter notebook notebooks/
+git clone https://github.com/Balisa50/credit-risk-scorecard.git
+cd credit-risk-scorecard
 
-# Dashboard
-cd dashboard
-npm install && npm run dev
+pip install -r pipeline/requirements.txt
+npm install
+```
+
+## Usage
+
+Run the model. It regenerates the loan book, fits the scorecard, validates it,
+stress tests it, and writes every figure the dashboard displays:
+
+```bash
+cd pipeline
+python run_pipeline.py
+# -> ../public/data/pipeline_results.json
+```
+
+Then serve the dashboard:
+
+```bash
+npm run dev        # http://localhost:3000
+```
+
+The synthetic book is seeded, so a fresh clone reproduces the numbers in the
+table below exactly.
+
+## Layout
+
+```
+pipeline/
+  generate_data.py   synthetic loan book, seeded
+  run_pipeline.py    orchestrates the run, writes the JSON
+  src/
+    woe_iv.py        binning, weight of evidence, information value
+    scorecard.py     coefficients to Basel II integer points
+    validation.py    Gini, KS, AUC, PSI
+    stress_test.py   scenario shifts and re-scoring
+app/, components/    Next.js dashboard
+public/data/         the pipeline output the dashboard reads
 ```
 
 ## Results
 
-All figures below are the test-set values written by `pipeline/run_pipeline.py`
-into `public/data/pipeline_results.json`, which is also what the dashboard renders.
+Every figure below is read from `public/data/pipeline_results.json`, the file
+`pipeline/run_pipeline.py` writes and the dashboard renders. Re-running the
+pipeline on a clean clone reproduces them.
 
-| Metric | Train | Test | Industry threshold |
-|--------|-------|------|--------------------|
-| Gini coefficient | 0.35 | **0.29** | > 0.4 |
-| KS statistic | 0.27 | **0.23** | > 0.3 |
-| AUC-ROC | 0.68 | **0.65** | - |
-| PSI (population stability) | - | **0.008** | < 0.1 |
+| Metric | Train | Test | Usual threshold |
+|--------|-------|------|-----------------|
+| Gini coefficient | 0.286 | **0.268** | > 0.4 |
+| KS statistic | 0.214 | **0.212** | > 0.3 |
+| AUC-ROC (derived, `(Gini+1)/2`) | 0.643 | **0.634** | - |
+| PSI, early vs late vintages | - | **0.002** | < 0.1 |
 
-Discrimination falls short of the usual thresholds, and that is a property of the
-synthetic data rather than the modelling. No feature reaches Strong information
-value: `previous_defaults` is the best at IV 0.13, and the eight selected
-features sum to roughly 0.51 IV. A scorecard cannot separate better than its
-features do. The stability and explainability layers (PSI, WoE bins, points
-conversion) are the parts worth reading here.
+Book: 12,000 loans, $9.43m, 13.3% default rate, split 8,531 train / 3,469 test.
+
+Discrimination falls short of the usual thresholds, and that is a property of
+the synthetic data rather than the modelling. Of 17 candidate features, 10
+clear the IV 0.02 cut and none reaches Strong. The best is `dti_ratio` at IV
+0.147, followed by `previous_defaults` at 0.106 and `dpd_history_days` at
+0.105; the ten selected features sum to roughly 0.59 IV. A scorecard cannot
+separate better than its features do.
+
+The stability and explainability layers are the parts worth reading here: the
+WoE bins, the coefficient-to-points conversion, and the fact that PSI reports
+Stable while the realised default rate moves from 12.3% to 15.9% across the
+vintages. That gap is the point. PSI measures the score distribution, not the
+outcome, and a book can drift in risk without drifting in score.
 
 ## Live
 
 [credit-risk-ab.vercel.app](https://credit-risk-ab.vercel.app)
 
+## Licence
+
+MIT. See [LICENSE](LICENSE). The loan book is synthetic and carries no
+real borrower data.
