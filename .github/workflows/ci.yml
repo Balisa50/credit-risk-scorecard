@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  scorecard:
+    name: Scorecard (tests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+
+      - name: Install dependencies
+        run: |
+          pip install -r pipeline/requirements.txt
+          pip install pytest
+
+      - name: Test the scorecard maths
+        working-directory: pipeline
+        run: pytest
+
+      - name: Run the full pipeline
+        working-directory: pipeline
+        run: python run_pipeline.py
+
+      - name: Fail if a fresh seeded run does not reproduce the committed results
+        working-directory: pipeline
+        run: python check_reproducible.py
+
+  dashboard:
+    name: Dashboard (build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run build

@@ -1,5 +1,8 @@
 # Credit Risk Scorecard
 
+[![CI](https://github.com/Balisa50/credit-risk-scorecard/actions/workflows/ci.yml/badge.svg)](https://github.com/Balisa50/credit-risk-scorecard/actions/workflows/ci.yml)
+[![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+
 Basel II-compliant credit scorecard for West African microfinance. Logistic regression with WoE encoding, built on 12,000 synthetic loans calibrated to microfinance risk profiles in the region.
 
 Why build this: most credit risk tooling assumes the data and risk distribution of mature Western markets. West African microfinance has different risk drivers - mobile money usage, agricultural income seasonality, informal employment - so the feature importance looks different.
@@ -84,6 +87,32 @@ pipeline/
 app/, components/    Next.js dashboard
 public/data/         the pipeline output the dashboard reads
 ```
+
+## Tests
+
+```bash
+pip install pytest
+cd pipeline
+pytest                         # 16 tests on the maths
+python check_reproducible.py   # a fresh run must match the committed results
+```
+
+The tests assert identities, not this book's figures. Pinning Gini to 0.268
+would break the moment the generator is retuned and would catch no real defect.
+These check that the WoE bins account for every row, that WoE is the log ratio
+of the two distributions, that no information value component can come out
+negative, and that a predictive feature outscores pure noise.
+
+The one worth reading is `test_doubling_the_odds_moves_the_score_by_exactly_pdo`.
+That is the defining property of a points scorecard: the score is affine in the
+log-odds with slope `-PDO / ln 2`, so moving the linear predictor by exactly
+`ln 2` has to move the score by exactly 20 points and by nothing else. A broken
+points conversion fails it immediately.
+
+CI runs the tests, runs the full pipeline, and fails if a fresh seeded run does
+not reproduce `public/data/pipeline_results.json` apart from its timestamp. The
+results table below and the model can no longer drift apart silently, which is
+what happened before: it quoted a Gini of 0.29 against an actual 0.268.
 
 ## Results
 
