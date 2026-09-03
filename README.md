@@ -113,7 +113,10 @@ CI runs the tests, runs the full pipeline, and fails if a fresh seeded run does
 not reproduce `public/data/pipeline_results.json`. The comparison is a 0.1%
 relative tolerance rather than exact equality, because lbfgs and the platform
 BLAS differ in the last digits between Windows and Linux. Structure is compared
-exactly. The results table below and the model can no longer drift apart
+exactly. The sampled ROC and KS curves are excluded from the numeric part,
+because a step function rendered at fixed sample points can jump a whole step
+on a sub-tolerance score change; Gini, which is computed from the whole curve,
+is still checked. The results table below and the model can no longer drift apart
 silently, which is what happened before: it quoted a Gini of 0.29 against an
 actual 0.268.
 
