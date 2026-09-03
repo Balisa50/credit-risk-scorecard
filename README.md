@@ -110,9 +110,12 @@ log-odds with slope `-PDO / ln 2`, so moving the linear predictor by exactly
 points conversion fails it immediately.
 
 CI runs the tests, runs the full pipeline, and fails if a fresh seeded run does
-not reproduce `public/data/pipeline_results.json` apart from its timestamp. The
-results table below and the model can no longer drift apart silently, which is
-what happened before: it quoted a Gini of 0.29 against an actual 0.268.
+not reproduce `public/data/pipeline_results.json`. The comparison is a 0.1%
+relative tolerance rather than exact equality, because lbfgs and the platform
+BLAS differ in the last digits between Windows and Linux. Structure is compared
+exactly. The results table below and the model can no longer drift apart
+silently, which is what happened before: it quoted a Gini of 0.29 against an
+actual 0.268.
 
 ## Results
 
